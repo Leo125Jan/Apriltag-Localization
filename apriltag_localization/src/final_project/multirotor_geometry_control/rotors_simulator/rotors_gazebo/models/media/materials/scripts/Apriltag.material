@@ -1,0 +1,169 @@
+material Apriltag/id0
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id0.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id1
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id1.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id2
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id2.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id3
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id3.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id4
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id4.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id5
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id5.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id6
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id6.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id7
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id7.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id8
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id8.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+
+material Apriltag/id9
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture tag3611_id9.png
+        filtering none none none
+        scale 1.0 1.0
+      }
+    }
+  }
+}
