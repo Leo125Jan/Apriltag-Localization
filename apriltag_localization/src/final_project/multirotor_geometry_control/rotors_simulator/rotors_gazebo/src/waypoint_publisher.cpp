@@ -176,17 +176,17 @@ int main(int argc, char** argv)
 
 	trajectory_pub.publish(trajectory_msg);
 
-	sleep(3);
+	// sleep(3);
 
-	Go_to_waypoint(nh, trajectory_pub, DEG_2_RAD, desired_yaw);
+	// Go_to_waypoint(nh, trajectory_pub, DEG_2_RAD, desired_yaw);
 
-    sleep(5);
+ //    sleep(5);
 
-    sleep(3);
+ //    sleep(3);
 
-	Go_to_waypoint_2(nh, trajectory_pub, DEG_2_RAD, desired_yaw);
+	// Go_to_waypoint_2(nh, trajectory_pub, DEG_2_RAD, desired_yaw);
 
-    sleep(5);
+ //    sleep(5);
 
 	ros::spinOnce();
 	ros::shutdown();

@@ -1,0 +1,76 @@
+<launch>
+
+  <arg name="mav_name" default="neo11"/>
+  <arg name="world_name" default="basic"/>
+  <arg name="enable_logging" default="false" />
+  <arg name="enable_ground_truth" default="true" />
+  <arg name="log_file" default="$(arg mav_name)" />
+  <arg name="laser_enabled" default="true"/>
+  <arg name="kinect_enabled" default="false"/>
+
+  <env name="GAZEBO_MODEL_PATH" value="${GAZEBO_MODEL_PATH}:$(find rotors_gazebo)/models"/>
+  <env name="GAZEBO_RESOURCE_PATH" value="${GAZEBO_RESOURCE_PATH}:$(find rotors_gazebo)/models"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find rotors_gazebo)/worlds/charge_site.world" />
+    <arg name="paused" value="true"/>
+    <arg name="gui" value="true"/>
+  </include>
+
+  <!-- Robot one-->
+
+  <group ns="$(arg mav_name)">
+
+    <include file="$(find rotors_gazebo)/launch/spawn_mav.launch">
+
+      <arg name="mav_name" value="$(arg mav_name)" />
+      <arg name="model" value="$(find rotors_description)/urdf/mav_with_vi_sensor.gazebo" />
+      <arg name="enable_logging" value="$(arg enable_logging)" />
+      <arg name="enable_ground_truth" value="$(arg enable_ground_truth)" />
+      <arg name="log_file" value="$(arg log_file)"/>
+      <arg name="y" value="5"/>
+      <arg name="x" value="5"/>
+      <arg name="z" value="0"/>
+
+    </include>
+    <include file="$(find husky_gazebo)/launch/spawn_husky.launch">
+
+      <arg name="y" value="100"/>
+      <arg name="x" value="100"/>
+      
+    </include>
+    
+  </group>
+
+  <!-- iris -->
+    
+  <group ns="iris">
+    <include file="$(find rotors_gazebo)/launch/spawn_mav.launch">
+        <arg name="mav_name" value="iris" />
+        <arg name="namespace" value="iris" />
+        <arg name="model" value="$(find rotors_description)/urdf/mav_with_vi_sensor_iris.gazebo" />
+        <arg name="enable_logging" value="$(arg enable_logging)" />
+        <arg name="enable_ground_truth" value="$(arg enable_ground_truth)" />
+        <arg name="log_file" value="iris"/>
+        <arg name="y" value="0"/>
+        <arg name="x" value="0"/>
+        <arg name="z" value="1.3"/>
+    </include>
+  </group>
+
+  <!-- iris2 -->
+  <group ns="iris2">
+    <include file="$(find rotors_gazebo)/launch/spawn_mav.launch">
+        <arg name="mav_name" value="iris" />
+        <arg name="namespace" value="iris2" />
+        <arg name="model" value="$(find rotors_description)/urdf/mav_with_vi_sensor_iris_2.gazebo" />
+        <arg name="enable_logging" value="$(arg enable_logging)" />
+        <arg name="enable_ground_truth" value="$(arg enable_ground_truth)" />
+        <arg name="log_file" value="iris2"/>
+        <arg name="y" value="13"/>
+        <arg name="x" value="13"/>
+        <arg name="z" value="1.3"/>
+    </include>
+  </group>
+
+</launch>

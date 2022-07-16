@@ -84,6 +84,7 @@ final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFi
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
+final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.o: /opt/ros/noetic/include/std_msgs/Int64.h
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.o: /opt/ros/noetic/include/trajectory_msgs/MultiDOFJointTrajectory.h
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.o: /opt/ros/noetic/include/trajectory_msgs/MultiDOFJointTrajectoryPoint.h
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h

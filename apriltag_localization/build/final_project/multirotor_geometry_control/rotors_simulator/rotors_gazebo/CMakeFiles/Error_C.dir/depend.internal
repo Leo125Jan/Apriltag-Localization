@@ -85,6 +85,7 @@ final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFi
  /opt/ros/noetic/include/ros/wall_timer_options.h
  /opt/ros/noetic/include/rosconsole/macros_generated.h
  /opt/ros/noetic/include/std_msgs/Header.h
+ /opt/ros/noetic/include/std_msgs/Int64.h
  /opt/ros/noetic/include/trajectory_msgs/MultiDOFJointTrajectory.h
  /opt/ros/noetic/include/trajectory_msgs/MultiDOFJointTrajectoryPoint.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
