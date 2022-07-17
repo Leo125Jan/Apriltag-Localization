@@ -80,16 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -122,6 +112,16 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/leo/UAY/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/rule:
+	cd /home/leo/UAY/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/rule
+.PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/rule
+
+# Convenience name for target.
+Error_C_OOP_ver2: final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/rule
+
+.PHONY : Error_C_OOP_ver2
+
+# fast build rule for target.
+Error_C_OOP_ver2/fast:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/build
+.PHONY : Error_C_OOP_ver2/fast
 
 # Convenience name for target.
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/sdf.dir/rule:
@@ -288,6 +303,21 @@ waypoint_publisher_path_planning/fast:
 .PHONY : waypoint_publisher_path_planning/fast
 
 # Convenience name for target.
+final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/rule:
+	cd /home/leo/UAY/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/rule
+.PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/rule
+
+# Convenience name for target.
+Error_C_OOP: final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/rule
+
+.PHONY : Error_C_OOP
+
+# fast build rule for target.
+Error_C_OOP/fast:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build
+.PHONY : Error_C_OOP/fast
+
+# Convenience name for target.
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/path_planning_and_landing.dir/rule:
 	cd /home/leo/UAY/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/path_planning_and_landing.dir/rule
 .PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/path_planning_and_landing.dir/rule
@@ -373,6 +403,60 @@ src/Error_C.s: src/Error_C.cpp.s
 src/Error_C.cpp.s:
 	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C.dir/src/Error_C.cpp.s
 .PHONY : src/Error_C.cpp.s
+
+src/Error_C_OOP.o: src/Error_C_OOP.cpp.o
+
+.PHONY : src/Error_C_OOP.o
+
+# target to build an object file
+src/Error_C_OOP.cpp.o:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/src/Error_C_OOP.cpp.o
+.PHONY : src/Error_C_OOP.cpp.o
+
+src/Error_C_OOP.i: src/Error_C_OOP.cpp.i
+
+.PHONY : src/Error_C_OOP.i
+
+# target to preprocess a source file
+src/Error_C_OOP.cpp.i:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/src/Error_C_OOP.cpp.i
+.PHONY : src/Error_C_OOP.cpp.i
+
+src/Error_C_OOP.s: src/Error_C_OOP.cpp.s
+
+.PHONY : src/Error_C_OOP.s
+
+# target to generate assembly for a file
+src/Error_C_OOP.cpp.s:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/src/Error_C_OOP.cpp.s
+.PHONY : src/Error_C_OOP.cpp.s
+
+src/Error_C_OOP_ver2.o: src/Error_C_OOP_ver2.cpp.o
+
+.PHONY : src/Error_C_OOP_ver2.o
+
+# target to build an object file
+src/Error_C_OOP_ver2.cpp.o:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/src/Error_C_OOP_ver2.cpp.o
+.PHONY : src/Error_C_OOP_ver2.cpp.o
+
+src/Error_C_OOP_ver2.i: src/Error_C_OOP_ver2.cpp.i
+
+.PHONY : src/Error_C_OOP_ver2.i
+
+# target to preprocess a source file
+src/Error_C_OOP_ver2.cpp.i:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/src/Error_C_OOP_ver2.cpp.i
+.PHONY : src/Error_C_OOP_ver2.cpp.i
+
+src/Error_C_OOP_ver2.s: src/Error_C_OOP_ver2.cpp.s
+
+.PHONY : src/Error_C_OOP_ver2.s
+
+# target to generate assembly for a file
+src/Error_C_OOP_ver2.cpp.s:
+	cd /home/leo/UAY/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/src/Error_C_OOP_ver2.cpp.s
+.PHONY : src/Error_C_OOP_ver2.cpp.s
 
 src/hovering_example.o: src/hovering_example.cpp.o
 
@@ -652,18 +736,20 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... list_install_components"
+	@echo "... Error_C_OOP_ver2"
 	@echo "... sdf"
 	@echo "... waypoint_publisher"
 	@echo "... waypoint_publisher_Landing"
-	@echo "... test"
 	@echo "... waypoint_publisher_lo"
 	@echo "... hovering_example"
 	@echo "... waypoint_publisher_move_to_husky"
 	@echo "... waypoint_publisher_iris"
 	@echo "... waypoint_publisher_path_planning"
+	@echo "... Error_C_OOP"
 	@echo "... path_planning_and_landing"
 	@echo "... install/local"
 	@echo "... waypoint_publisher_file"
@@ -672,6 +758,12 @@ help:
 	@echo "... src/Error_C.o"
 	@echo "... src/Error_C.i"
 	@echo "... src/Error_C.s"
+	@echo "... src/Error_C_OOP.o"
+	@echo "... src/Error_C_OOP.i"
+	@echo "... src/Error_C_OOP.s"
+	@echo "... src/Error_C_OOP_ver2.o"
+	@echo "... src/Error_C_OOP_ver2.i"
+	@echo "... src/Error_C_OOP_ver2.s"
 	@echo "... src/hovering_example.o"
 	@echo "... src/hovering_example.i"
 	@echo "... src/hovering_example.s"

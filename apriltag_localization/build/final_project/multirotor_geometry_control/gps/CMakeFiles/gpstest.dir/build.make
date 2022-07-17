@@ -96,6 +96,7 @@ gpstest_EXTERNAL_OBJECTS =
 /home/leo/UAY/devel/lib/gps/gpstest: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/leo/UAY/devel/lib/gps/gpstest: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/leo/UAY/devel/lib/gps/gpstest: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/leo/UAY/devel/lib/gps/gpstest: /usr/lib/x86_64-linux-gnu/libGeographic.so
 /home/leo/UAY/devel/lib/gps/gpstest: final_project/multirotor_geometry_control/gps/CMakeFiles/gpstest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leo/UAY/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/leo/UAY/devel/lib/gps/gpstest"
 	cd /home/leo/UAY/build/final_project/multirotor_geometry_control/gps && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gpstest.dir/link.txt --verbose=$(VERBOSE)

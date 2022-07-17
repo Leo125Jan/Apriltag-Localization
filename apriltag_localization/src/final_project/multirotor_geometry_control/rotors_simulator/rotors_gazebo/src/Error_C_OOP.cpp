@@ -29,97 +29,102 @@
 
 using namespace std;
 using namespace Eigen;
+
 const float DEG_2_RAD = M_PI / 180.0;
 
 class ErrorCalculate
 {
-public:
+	public:
 
-	ErrorCalculate();
+		ErrorCalculate();
 
-	void OdeCallback(const geometry_msgs::Pose::ConstPtr &msg);
-	void downCallback(const apriltag_ros::AprilTagDetectionArray::ConstPtr &msg);
-	void forCallback(const apriltag_ros::AprilTagDetectionArray::ConstPtr &msg);
-	void Print_downward_error(float x, float y, float z, vector<int> id);
-	void Print_forward_error(float x, float y, float z, vector<int> id);
-	Eigen::Quaterniond Quaterion_calcutaion(float i, float j, float k, float w, float x, float y, float z);
+		void publish();
+		void waitForMessage();
+		void setForwardTagPos(vector<int> id);
+		void setDownwardTagPos(vector<int> id);
+		void OdeCallback(const geometry_msgs::Pose::ConstPtr &msg);
+		void Print_forward_error(float x, float y, float z, vector<int> id);
+		void Print_downward_error(float x, float y, float z, vector<int> id);
+		void downCallback(const apriltag_ros::AprilTagDetectionArray::ConstPtr &msg);
+		void forCallback(const apriltag_ros::AprilTagDetectionArray::ConstPtr &msg);
 
-	void setForwardTagPos(vector<int> id);
-	void setDownwardTagPos(vector<int> id);
+		Eigen::Quaterniond Quaterion_calcutaion(float i, float j, float k, float w, float x, float y, float z);
 
-	void waitForMessage();
+	private:
 
-	void publish();
-private:
+		///////////////publisher subscriber/////////////
 
-	///////////////publisher subscriber/////////////
+		ros::NodeHandle nh;
+		ros::Publisher Pose_detect_forward;
+		ros::Publisher Pose_detect_downward;
+		ros::Subscriber ode_sub;
+		ros::Subscriber downward_tag;
+		ros::Subscriber forward_tag;
 
-	ros::NodeHandle nh;
-	ros::Publisher Pose_detect_forward;
-	ros::Publisher Pose_detect_downward;
-	ros::Subscriber ode_sub;
-	ros::Subscriber downward_tag;
-	ros::Subscriber forward_tag;
+		///////////////Tag position/////////////
 
-	///////////////Tag position/////////////
+		float tagD_x;
+		float tagD_y;
+		float tagD_z;
+		float tagF_x;
+		float tagF_y;
+		float tagF_z;
 
-	float tagD_x;
-	float tagD_y;
-	float tagD_z;
-	float tagF_x;
-	float tagF_y;
-	float tagF_z;
+		///////////////odometry/////////////
 
-	///////////////odometry/////////////
+		float ode_x;
+		float ode_y;
+		float ode_z;
 
-	float ode_x;
-	float ode_y;
-	float ode_z;
+		///////////////camera_downward/////////////
 
-	///////////////camera_downward/////////////
+		float d_x_err;
+		float d_y_err;
+		float d_z_err;
+		float cald_x;
+		float cald_y;
+		float cald_z;
 
-	float d_x_err;
-	float d_y_err;
-	float d_z_err;
-	float cald_x;
-	float cald_y;
-	float cald_z;
-	Eigen::Quaterniond q_d;
-	std_msgs::Header header_d;
-	apriltag_ros::AprilTagDetectionArray down_b;
-	float x_b;
-	float y_b;
-	float z_b;
-	float i_b;
-	float j_b;
-	float k_b;
-	float w_b;
-	boost::array<float, 36> cov_d;
-	vector<int> id_d;
-	geometry_msgs::PoseWithCovarianceStamped Calibration_d;
+		Eigen::Quaterniond q_d;
+		std_msgs::Header header_d;
+		apriltag_ros::AprilTagDetectionArray down_b;
 
-	///////////////camera_forward/////////////
+		float x_b;
+		float y_b;
+		float z_b;
+		float i_b;
+		float j_b;
+		float k_b;
 
-	float f_x_err;
-	float f_y_err;
-	float f_z_err;
-	float calf_x;
-	float calf_y;
-	float calf_z;
-	Eigen::Quaterniond q_f;
-	std_msgs::Header header_f;
-	apriltag_ros::AprilTagDetectionArray down_f;
-	float x_f;
-	float y_f;
-	float z_f;
-	float i_f;
-	float j_f;
-	float k_f;
-	float w_f;
-	boost::array<float, 36> cov_f;
-	vector<int> id_f;
-	geometry_msgs::PoseWithCovarianceStamped Calibration_f;
+		float w_b;
+		boost::array<float, 36> cov_d;
+		vector<int> id_d;
+		geometry_msgs::PoseWithCovarianceStamped Calibration_d;
 
+		///////////////camera_forward/////////////
+
+		float f_x_err;
+		float f_y_err;
+		float f_z_err;
+		float calf_x;
+		float calf_y;
+		float calf_z;
+
+		Eigen::Quaterniond q_f;
+		std_msgs::Header header_f;
+		apriltag_ros::AprilTagDetectionArray down_f;
+
+		float x_f;
+		float y_f;
+		float z_f;
+		float i_f;
+		float j_f;
+		float k_f;
+		float w_f;
+
+		boost::array<float, 36> cov_f;
+		vector<int> id_f;
+		geometry_msgs::PoseWithCovarianceStamped Calibration_f;
 };
 
 ErrorCalculate::ErrorCalculate()
@@ -231,6 +236,7 @@ void ErrorCalculate::forCallback(const apriltag_ros::AprilTagDetectionArray::Con
 void ErrorCalculate::Print_downward_error(float x, float y, float z, vector<int> id)
 {
 	setDownwardTagPos(id);
+
 	cald_x = x + tagD_x;
 	cald_y = y + tagD_y;
 	cald_z = z + 0.01 + tagD_z;
@@ -248,6 +254,7 @@ void ErrorCalculate::Print_downward_error(float x, float y, float z, vector<int>
 void ErrorCalculate::Print_forward_error(float x, float y, float z, vector<int> id)
 {
 	setForwardTagPos(id);
+
 	calf_x = tagF_x - (z + 0.05) - 0.1;
 	calf_y = tagF_y + y;
 	calf_z = tagF_z + x - 0.02;
@@ -265,6 +272,7 @@ void ErrorCalculate::Print_forward_error(float x, float y, float z, vector<int> 
 void ErrorCalculate::setDownwardTagPos(vector<int> id)
 {
 	if(id.size() != 0)
+
 		switch (id[0])
 		{
 			case 0:
@@ -372,12 +380,12 @@ void ErrorCalculate::setDownwardTagPos(vector<int> id)
 
 				break;
 		}
-	
 }
 
 void ErrorCalculate::setForwardTagPos(vector<int> id)
 {
 	if(id.size() != 0)
+
 		switch (id[0])
 		{
 			case 1:
@@ -413,6 +421,7 @@ int main(int argc, char** argv)
 	while(ros::ok())
 	{
 		ros::spinOnce();
+
 		ec.publish();
 	}
 }

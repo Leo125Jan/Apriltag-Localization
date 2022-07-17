@@ -96,6 +96,12 @@ target_link_libraries(waypoint_publisher_lo ${catkin_LIBRARIES})
 add_executable(Error_C src/Error_C.cpp)
 target_link_libraries(Error_C ${catkin_LIBRARIES})
 
+add_executable(Error_C_OOP src/Error_C_OOP.cpp)
+target_link_libraries(Error_C_OOP ${catkin_LIBRARIES})
+
+add_executable(Error_C_OOP_ver2 src/Error_C_OOP_ver2.cpp)
+target_link_libraries(Error_C_OOP_ver2 ${catkin_LIBRARIES})
+
 
 foreach(dir launch models resource worlds)
    install(DIRECTORY ${dir}/

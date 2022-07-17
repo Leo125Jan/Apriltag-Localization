@@ -90,19 +90,19 @@ int main(int argc, char** argv)
 
 	trajectory_pub.publish(trajectory_msg);
 
-	ros::Publisher Start_det;
+	// ros::Publisher Start_det;
 
-	Start_det = nh.advertise<std_msgs::Int64>("/iris1/start_det", 1000);
+	// Start_det = nh.advertise<std_msgs::Int64>("/iris1/start_det", 1000);
 
-	sleep(5);
+	// sleep(5);
 
-	std_msgs::Int64 Do;
-    Do.data = 1;
+	// std_msgs::Int64 Do;
+ //    Do.data = 1;
 
-    for(int i = 0; i < 1000; i++)
-    {
-    	Start_det.publish(Do);
-    }
+ //    for(int i = 0; i < 1000; i++)
+ //    {
+ //    	Start_det.publish(Do);
+ //    }
 
     sleep(5);
 
@@ -120,16 +120,16 @@ int main(int argc, char** argv)
 
 	// trajectory_pub.publish(trajectory_msg);
 
-	for (int i = 0; i < 13; i++)
-	{
-		sleep(17);
+	// for (int i = 0; i < 13; i++)
+	// {
+	// 	sleep(17);
 
-		desired_position << -6 + i, 0, 2;
+	// 	desired_position << -6 + i, 0, 2;
 
-		mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
+	// 	mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
 
-		trajectory_pub.publish(trajectory_msg);
-	}
+	// 	trajectory_pub.publish(trajectory_msg);
+	// }
 
 	ros::spinOnce();
 	ros::shutdown();

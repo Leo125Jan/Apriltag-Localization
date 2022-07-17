@@ -235,8 +235,6 @@ Eigen/Core
 -
 Eigen/Dense
 -
-type_traits
--
 Eigen/Geometry
 -
 boost/array.hpp

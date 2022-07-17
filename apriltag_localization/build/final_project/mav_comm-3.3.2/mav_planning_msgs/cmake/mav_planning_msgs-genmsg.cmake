@@ -24,7 +24,7 @@ add_custom_target(_mav_planning_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg" NAME_WE)
 add_custom_target(_mav_planning_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg" "std_msgs/Header:sensor_msgs/PointCloud2:sensor_msgs/PointField:geometry_msgs/TransformStamped:geometry_msgs/Vector3:geometry_msgs/Transform:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg" "geometry_msgs/Vector3:sensor_msgs/PointField:geometry_msgs/TransformStamped:geometry_msgs/Transform:sensor_msgs/PointCloud2:geometry_msgs/Quaternion:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg" NAME_WE)
@@ -39,7 +39,7 @@ add_custom_target(_mav_planning_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg" NAME_WE)
 add_custom_target(_mav_planning_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg" "mav_planning_msgs/PolygonWithHoles:mav_planning_msgs/Point2D:mav_planning_msgs/Polygon2D:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg" "std_msgs/Header:mav_planning_msgs/Point2D:mav_planning_msgs/Polygon2D:mav_planning_msgs/PolygonWithHoles"
 )
 
 get_filename_component(_filename "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg" NAME_WE)
@@ -54,12 +54,12 @@ add_custom_target(_mav_planning_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv" NAME_WE)
 add_custom_target(_mav_planning_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv" "geometry_msgs/Pose:mav_planning_msgs/PolynomialTrajectory4D:std_msgs/Header:geometry_msgs/Point:geometry_msgs/PoseStamped:geometry_msgs/Twist:mav_planning_msgs/PolynomialSegment4D:trajectory_msgs/MultiDOFJointTrajectoryPoint:trajectory_msgs/MultiDOFJointTrajectory:geometry_msgs/Vector3:geometry_msgs/Transform:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv" "geometry_msgs/Vector3:mav_planning_msgs/PolynomialTrajectory4D:geometry_msgs/Transform:geometry_msgs/PoseStamped:geometry_msgs/Quaternion:geometry_msgs/Pose:mav_planning_msgs/PolynomialSegment4D:geometry_msgs/Twist:geometry_msgs/Point:std_msgs/Header:trajectory_msgs/MultiDOFJointTrajectory:trajectory_msgs/MultiDOFJointTrajectoryPoint"
 )
 
 get_filename_component(_filename "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv" NAME_WE)
 add_custom_target(_mav_planning_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv" "std_msgs/Header:mav_planning_msgs/Point2D:mav_planning_msgs/PolygonWithHoles:mav_planning_msgs/Polygon2D:mav_planning_msgs/PolygonWithHolesStamped"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mav_planning_msgs" "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv" "mav_planning_msgs/PolygonWithHolesStamped:mav_planning_msgs/PolygonWithHoles:mav_planning_msgs/Point2D:mav_planning_msgs/Polygon2D:std_msgs/Header"
 )
 
 #
@@ -77,7 +77,7 @@ _generate_msg_cpp(mav_planning_msgs
 _generate_msg_cpp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_cpp(mav_planning_msgs
@@ -95,7 +95,7 @@ _generate_msg_cpp(mav_planning_msgs
 _generate_msg_cpp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
   "${MSG_I_FLAGS}"
-  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_cpp(mav_planning_msgs
@@ -115,13 +115,13 @@ _generate_msg_cpp(mav_planning_msgs
 _generate_srv_cpp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_srv_cpp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
+  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mav_planning_msgs
 )
 
@@ -174,7 +174,7 @@ _generate_msg_eus(mav_planning_msgs
 _generate_msg_eus(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_eus(mav_planning_msgs
@@ -192,7 +192,7 @@ _generate_msg_eus(mav_planning_msgs
 _generate_msg_eus(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
   "${MSG_I_FLAGS}"
-  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_eus(mav_planning_msgs
@@ -212,13 +212,13 @@ _generate_msg_eus(mav_planning_msgs
 _generate_srv_eus(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_srv_eus(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
+  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mav_planning_msgs
 )
 
@@ -271,7 +271,7 @@ _generate_msg_lisp(mav_planning_msgs
 _generate_msg_lisp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_lisp(mav_planning_msgs
@@ -289,7 +289,7 @@ _generate_msg_lisp(mav_planning_msgs
 _generate_msg_lisp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
   "${MSG_I_FLAGS}"
-  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_lisp(mav_planning_msgs
@@ -309,13 +309,13 @@ _generate_msg_lisp(mav_planning_msgs
 _generate_srv_lisp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_srv_lisp(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
+  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mav_planning_msgs
 )
 
@@ -368,7 +368,7 @@ _generate_msg_nodejs(mav_planning_msgs
 _generate_msg_nodejs(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_nodejs(mav_planning_msgs
@@ -386,7 +386,7 @@ _generate_msg_nodejs(mav_planning_msgs
 _generate_msg_nodejs(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
   "${MSG_I_FLAGS}"
-  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_nodejs(mav_planning_msgs
@@ -406,13 +406,13 @@ _generate_msg_nodejs(mav_planning_msgs
 _generate_srv_nodejs(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_srv_nodejs(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
+  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mav_planning_msgs
 )
 
@@ -465,7 +465,7 @@ _generate_msg_py(mav_planning_msgs
 _generate_msg_py(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PointCloudWithPose.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_py(mav_planning_msgs
@@ -483,7 +483,7 @@ _generate_msg_py(mav_planning_msgs
 _generate_msg_py(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
   "${MSG_I_FLAGS}"
-  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_msg_py(mav_planning_msgs
@@ -503,13 +503,13 @@ _generate_msg_py(mav_planning_msgs
 _generate_srv_py(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PlannerService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialTrajectory4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolynomialSegment4D.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectory.msg;/opt/ros/noetic/share/trajectory_msgs/cmake/../msg/MultiDOFJointTrajectoryPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mav_planning_msgs
 )
 _generate_srv_py(mav_planning_msgs
   "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/srv/PolygonService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg"
+  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHolesStamped.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/PolygonWithHoles.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Point2D.msg;/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_planning_msgs/msg/Polygon2D.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mav_planning_msgs
 )
 

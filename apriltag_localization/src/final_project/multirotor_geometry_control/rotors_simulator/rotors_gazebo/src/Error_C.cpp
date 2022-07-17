@@ -11,7 +11,6 @@
 #include <ros/ros.h>
 #include <Eigen/Core>
 #include <Eigen/Dense>
-#include <type_traits>
 #include <Eigen/Geometry>
 #include <boost/array.hpp>
 #include <nav_msgs/Path.h>
@@ -164,14 +163,14 @@ void Print_downward_error(float x, float y, float z, vector<int> id)
 	cald_y = y + tag_y;
 	cald_z = z + 0.01 + tag_z;
 
-	// cout << "calbration_d_x: " << cald_x << ", calbration_d_y: " << cald_y << ", calbration_d_z: " << cald_z << endl;
+	cout << "calbration_d_x: " << cald_x << ", calbration_d_y: " << cald_y << ", calbration_d_z: " << cald_z << endl;
 
-	// d_x_err = abs(ode_x - cald_x);
-	// d_y_err = abs(ode_y - cald_y);
-	// d_z_err = abs(ode_z - cald_z);
+	d_x_err = abs(ode_x - cald_x);
+	d_y_err = abs(ode_y - cald_y);
+	d_z_err = abs(ode_z - cald_z);
 
-	// cout << "downward_error_x: " << d_x_err << ", downward_error_y: " << d_y_err 
-	// 	<< ", downward_error_z: " << d_z_err << endl << endl;
+	cout << "downward_error_x: " << d_x_err << ", downward_error_y: " << d_y_err 
+		<< ", downward_error_z: " << d_z_err << endl << endl;
 }
 
 float f_x_err, f_y_err, f_z_err;
@@ -236,23 +235,29 @@ vector<int> id_d;
 
 void downCallback(const apriltag_ros::AprilTagDetectionArray::ConstPtr &msg)
 {
-	
-	down_b = *msg;
+	if (msg->detections.size() == 0)
+	{
+		ROS_INFO("No tag detected");
+	}
+	else
+	{
+		down_b = *msg;
 
-	id_d = down_b.detections[0].id;
-	header_d = down_b.detections[0].pose.header;
-	cov_d = down_b.detections[0].pose.pose.covariance;
-	x_b = down_b.detections[0].pose.pose.pose.position.x;
-	y_b = down_b.detections[0].pose.pose.pose.position.y;
-    z_b = down_b.detections[0].pose.pose.pose.position.z;
-    i_b = down_b.detections[0].pose.pose.pose.orientation.x;
-    j_b = down_b.detections[0].pose.pose.pose.orientation.y;
-    k_b = down_b.detections[0].pose.pose.pose.orientation.z;
-    w_b = down_b.detections[0].pose.pose.pose.orientation.w;
+		id_d = down_b.detections[0].id;
+		header_d = down_b.detections[0].pose.header;
+		cov_d = down_b.detections[0].pose.pose.covariance;
+		x_b = down_b.detections[0].pose.pose.pose.position.x;
+		y_b = down_b.detections[0].pose.pose.pose.position.y;
+	    z_b = down_b.detections[0].pose.pose.pose.position.z;
+	    i_b = down_b.detections[0].pose.pose.pose.orientation.x;
+	    j_b = down_b.detections[0].pose.pose.pose.orientation.y;
+	    k_b = down_b.detections[0].pose.pose.pose.orientation.z;
+	    w_b = down_b.detections[0].pose.pose.pose.orientation.w;
 
-    q_d = Quaterion_calcutaion(i_b, j_b, k_b, w_b, x_b, y_b, z_b);
+	    q_d = Quaterion_calcutaion(i_b, j_b, k_b, w_b, x_b, y_b, z_b);
 
-	Print_downward_error(-q_d.x(), -q_d.y(), -q_d.z(), id_d);
+		Print_downward_error(-q_d.x(), -q_d.y(), -q_d.z(), id_d);
+	}
 }
 
 Eigen::Quaterniond q_f;
@@ -278,9 +283,9 @@ void forCallback(const apriltag_ros::AprilTagDetectionArray::ConstPtr &msg)
     k_f = down_b.detections[0].pose.pose.pose.orientation.z;
     w_f = down_b.detections[0].pose.pose.pose.orientation.w;
 
-    q_f = Quaterion_calcutaion(i_f, j_f, k_f, w_f, x_f, y_f, z_f);
+    // q_f = Quaterion_calcutaion(i_f, j_f, k_f, w_f, x_f, y_f, z_f);
 
-    Print_forward_error(-q_f.x(), -q_f.y(), -q_f.z(), id_f);
+    // Print_forward_error(-q_f.x(), -q_f.y(), -q_f.z(), id_f);
 }
 
 int main(int argc, char** argv)
@@ -311,15 +316,15 @@ int main(int argc, char** argv)
 	ROS_INFO("Wait for take off");
 
 	// Wait for message
-	boost::shared_ptr<std_msgs::Int64 const> sharedEdge;
-	sharedEdge = ros::topic::waitForMessage<std_msgs::Int64>("/iris1/start_det", nh);
+	// boost::shared_ptr<std_msgs::Int64 const> sharedEdge;
+	// sharedEdge = ros::topic::waitForMessage<std_msgs::Int64>("/iris1/start_det", nh);
 
-	sleep(1);
+	// sleep(1);
 
-	if(sharedEdge != NULL)
-	{
-		ROS_INFO("Start Detect");
-	}
+	// if(sharedEdge != NULL)
+	// {
+	// 	ROS_INFO("Start Detect");
+	// }
 
 	while (ros::ok())
 	{

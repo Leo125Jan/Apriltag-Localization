@@ -7955,6 +7955,19 @@ move_base_msgs_generate_messages_lisp/fast:
 .PHONY : move_base_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named Error_C_OOP_ver2
+
+# Build rule for target.
+Error_C_OOP_ver2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Error_C_OOP_ver2
+.PHONY : Error_C_OOP_ver2
+
+# fast build rule for target.
+Error_C_OOP_ver2/fast:
+	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP_ver2.dir/build
+.PHONY : Error_C_OOP_ver2/fast
+
+#=============================================================================
 # Target rules for targets named sdf
 
 # Build rule for target.
@@ -8057,6 +8070,19 @@ waypoint_publisher_path_planning: cmake_check_build_system
 waypoint_publisher_path_planning/fast:
 	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build
 .PHONY : waypoint_publisher_path_planning/fast
+
+#=============================================================================
+# Target rules for targets named Error_C_OOP
+
+# Build rule for target.
+Error_C_OOP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Error_C_OOP
+.PHONY : Error_C_OOP
+
+# fast build rule for target.
+Error_C_OOP/fast:
+	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build
+.PHONY : Error_C_OOP/fast
 
 #=============================================================================
 # Target rules for targets named path_planning_and_landing
@@ -8722,6 +8748,7 @@ help:
 	@echo "... move_base_gencfg"
 	@echo "... move_base"
 	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... Error_C_OOP_ver2"
 	@echo "... sdf"
 	@echo "... waypoint_publisher"
 	@echo "... waypoint_publisher_Landing"
@@ -8730,6 +8757,7 @@ help:
 	@echo "... waypoint_publisher_move_to_husky"
 	@echo "... waypoint_publisher_iris"
 	@echo "... waypoint_publisher_path_planning"
+	@echo "... Error_C_OOP"
 	@echo "... path_planning_and_landing"
 	@echo "... waypoint_publisher_file"
 	@echo "... waypoint_publisher_iris_2"
