@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/devel
+prefix=/home/leo/UAV/devel
 
 Name: husky_description
 Description: Description of husky_description

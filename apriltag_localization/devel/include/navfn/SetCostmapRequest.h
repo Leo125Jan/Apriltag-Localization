@@ -99,16 +99,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::navfn::SetCostmapRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::navfn::SetCostmapRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::navfn::SetCostmapRequest_<ContainerAllocator> >
   : FalseType
   { };
@@ -116,6 +106,16 @@ struct IsFixedSize< ::navfn::SetCostmapRequest_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::navfn::SetCostmapRequest_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::navfn::SetCostmapRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::navfn::SetCostmapRequest_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

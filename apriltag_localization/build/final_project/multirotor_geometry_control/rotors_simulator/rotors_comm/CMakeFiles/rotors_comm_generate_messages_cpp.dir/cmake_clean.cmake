@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/include/rotors_comm/Octomap.h"
-  "/home/leo/UAY/devel/include/rotors_comm/RecordRosbag.h"
-  "/home/leo/UAY/devel/include/rotors_comm/WindSpeed.h"
   "CMakeFiles/rotors_comm_generate_messages_cpp"
+  "/home/leo/UAV/devel/include/rotors_comm/WindSpeed.h"
+  "/home/leo/UAV/devel/include/rotors_comm/RecordRosbag.h"
+  "/home/leo/UAV/devel/include/rotors_comm/Octomap.h"
 )
 
 # Per-language clean rules from dependency scanning.

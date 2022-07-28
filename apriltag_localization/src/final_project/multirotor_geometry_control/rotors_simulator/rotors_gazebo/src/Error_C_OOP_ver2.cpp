@@ -51,6 +51,7 @@ class CameraCalibration
 
 		string type;
 		string Check;
+		string A;
 
 		///////////////publisher subscriber/////////////
 		ros::NodeHandle nh;
@@ -91,7 +92,9 @@ class CameraCalibration
 
 		boost::array<float, 36> cov;
 		vector<int> id;
-		geometry_msgs::PoseWithCovarianceStamped Calibration;	
+		geometry_msgs::PoseWithCovarianceStamped Calibration;
+
+		float index;
 };
 
 CameraCalibration::CameraCalibration(string Type, string pubTopic, string subTopic)
@@ -141,20 +144,62 @@ void CameraCalibration::cameraCallback(const apriltag_ros::AprilTagDetectionArra
 
 		tag = *msg;
 
-		id = tag.detections[0].id;
-		header = tag.detections[0].pose.header;
-		cov = tag.detections[0].pose.pose.covariance;
-		x = tag.detections[0].pose.pose.pose.position.x;
-		y = tag.detections[0].pose.pose.pose.position.y;
-	    z = tag.detections[0].pose.pose.pose.position.z;
-	    i = tag.detections[0].pose.pose.pose.orientation.x;
-	    j = tag.detections[0].pose.pose.pose.orientation.y;
-	    k = tag.detections[0].pose.pose.pose.orientation.z;
-	    w = tag.detections[0].pose.pose.pose.orientation.w;
+		// id = tag.detections[0].id;
+		// header = tag.detections[0].pose.header;
+		// cov = tag.detections[0].pose.pose.covariance;
+		// x = tag.detections[0].pose.pose.pose.position.x;
+		// y = tag.detections[0].pose.pose.pose.position.y;
+	 //    z = tag.detections[0].pose.pose.pose.position.z;
+	 //    i = tag.detections[0].pose.pose.pose.orientation.x;
+	 //    j = tag.detections[0].pose.pose.pose.orientation.y;
+	 //    k = tag.detections[0].pose.pose.pose.orientation.z;
+	 //    w = tag.detections[0].pose.pose.pose.orientation.w;
 
-	    q = Quaterion_calcutaion(i, j, k, w, x, y, z);
+	    // q = Quaterion_calcutaion(i, j, k, w, x, y, z);
 
-		Print_error(-q.x(), -q.y(), -q.z());
+	    if(type == "downward")
+	    {
+	    	id = tag.detections[0].id;
+			header = tag.detections[0].pose.header;
+			cov = tag.detections[0].pose.pose.covariance;
+			x = tag.detections[0].pose.pose.pose.position.x;
+			y = tag.detections[0].pose.pose.pose.position.y;
+		    z = tag.detections[0].pose.pose.pose.position.z;
+		    i = tag.detections[0].pose.pose.pose.orientation.x;
+		    j = tag.detections[0].pose.pose.pose.orientation.y;
+		    k = tag.detections[0].pose.pose.pose.orientation.z;
+		    w = tag.detections[0].pose.pose.pose.orientation.w;
+
+	    	Print_error(y, x, z);
+	    }
+		else if(type == "forward")
+		{
+			index = tag.detections.size();
+
+			// id = tag.detections[index - 1].id;
+			// header = tag.detections[index - 1].pose.header;
+			// cov = tag.detections[index - 1].pose.pose.covariance;
+			// x = tag.detections[index - 1].pose.pose.pose.position.x;
+			// y = tag.detections[index - 1].pose.pose.pose.position.y;
+		 //    z = tag.detections[index - 1].pose.pose.pose.position.z;
+		 //    i = tag.detections[index - 1].pose.pose.pose.orientation.x;
+		 //    j = tag.detections[index - 1].pose.pose.pose.orientation.y;
+		 //    k = tag.detections[index - 1].pose.pose.pose.orientation.z;
+		 //    w = tag.detections[index - 1].pose.pose.pose.orientation.w;
+
+		    id = tag.detections[0].id;
+			header = tag.detections[0].pose.header;
+			cov = tag.detections[0].pose.pose.covariance;
+			x = tag.detections[0].pose.pose.pose.position.x;
+			y = tag.detections[0].pose.pose.pose.position.y;
+		    z = tag.detections[0].pose.pose.pose.position.z;
+		    i = tag.detections[0].pose.pose.pose.orientation.x;
+		    j = tag.detections[0].pose.pose.pose.orientation.y;
+		    k = tag.detections[0].pose.pose.pose.orientation.z;
+		    w = tag.detections[0].pose.pose.pose.orientation.w;
+
+			Print_error(y, x, z);
+		}
 
 		Calibration.header = header;
 		Calibration.pose.covariance = cov;
@@ -173,29 +218,32 @@ void CameraCalibration::Print_error(float x, float y, float z)
 {
 
 	setTagPos(id);
+
 	if(type == "downward")
 	{
+
 		cal_x = x + tag_x;
 		cal_y = y + tag_y;
 		cal_z = z + 0.01 + tag_z;
 	}
 	else if(type == "forward")
 	{
+
 		cal_x = tag_x - (z + 0.05) - 0.1;
 		cal_y = tag_y + y;
-		cal_z = tag_z + x - 0.02;
+		cal_z = tag_z + x;
 	}
 
-	cout << "calbration_" << type << "_x: "<< cal_x 
-		<< ", calbration_" << type << "_y: " << cal_y 
-		<< ", calbration_" << type << "_z: " << cal_z << endl;
+	// cout << "calbration_" << type << "_x: "<< cal_x 
+	// 	<< ", calbration_" << type << "_y: " << cal_y 
+	// 	<< ", calbration_" << type << "_z: " << cal_z << endl;
 
-	x_err = abs(ode_x - cal_x);
-	y_err = abs(ode_y - cal_y);
-	z_err = abs(ode_z - cal_z);
+	// x_err = abs(ode_x - cal_x);
+	// y_err = abs(ode_y - cal_y);
+	// z_err = abs(ode_z - cal_z);
 
-	cout << type << "_error_x: " << x_err << ", " << type << "_error_y: " << y_err 
-		<< ", " << type << "_error_z: " << z_err << endl << endl;
+	// cout << type << "_error_x: " << x_err << ", " << type << "_error_y: " << y_err 
+	// 	<< ", " << type << "_error_z: " << z_err << endl << endl;
 }
 
 void CameraCalibration::setTagPos(vector<int> id)
@@ -204,113 +252,116 @@ void CameraCalibration::setTagPos(vector<int> id)
 	{
 		if(type == "downward")
 		{
-			switch (id[0])
-			{
-				case 0:
+			// switch (id[0])
+			// {
+			// 	case 0:
 
-					tag_x = -6.85;
-					tag_y = 0;
+			// 		tag_x = -6.85;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 6:
+			// 	case 6:
 
-					tag_x = -6.0;
-					tag_y = 0;
+			// 		tag_x = -6.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 7:
+			// 	case 7:
 
-					tag_x = -5.0;
-					tag_y = 0;
+			// 		tag_x = -5.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 8:
+			// 	case 8:
 
-					tag_x = -4.0;
-					tag_y = 0;
+			// 		tag_x = -4.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 9:
+			// 	case 9:
 
-					tag_x = -3.0;
-					tag_y = 0;
+			// 		tag_x = -3.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 10:
+			// 	case 10:
 
-					tag_x = -2.0;
-					tag_y = 0;
+			// 		tag_x = -2.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 11:
+			// 	case 11:
 
-					tag_x = -1.0;
-					tag_y = 0;
+			// 		tag_x = -1.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 12:
+			// 	case 12:
 
-					tag_x = 0.0;
-					tag_y = 0;
+			// 		tag_x = 0.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 13:
+			// 	case 13:
 
-					tag_x = 1.0;
-					tag_y = 0;
+			// 		tag_x = 1.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 14:
+			// 	case 14:
 
-					tag_x = 2.0;
-					tag_y = 0;
+			// 		tag_x = 2.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 15:
+			// 	case 15:
 
-					tag_x = 3.0;
-					tag_y = 0;
+			// 		tag_x = 3.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 16:
+			// 	case 16:
 
-					tag_x = 4.0;
-					tag_y = 0;
+			// 		tag_x = 4.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 17:
+			// 	case 17:
 
-					tag_x = 5.0;
-					tag_y = 0;
+			// 		tag_x = 5.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				case 18:
+			// 	case 18:
 
-					tag_x = 6.0;
-					tag_y = 0;
+			// 		tag_x = 6.0;
+			// 		tag_y = 0;
 
-					break;
+			// 		break;
 
-				default:
+				// default:
 
-					tag_x = -7;
-					tag_y = 0;
+				// 	tag_x = -6;
+				// 	tag_y = -0.5;
 
-					break;
-			}
+				// 	break;
+			// }
+
+			tag_x = -6;
+			tag_y = -0.5;
 		}	
 		if(type == "forward")
 		{
@@ -318,8 +369,16 @@ void CameraCalibration::setTagPos(vector<int> id)
 			{
 				case 1:
 
-					tag_x = 8.0;
-					tag_y = 0;
+					tag_x = 2.0;
+					tag_y = -0.5;
+					tag_z = 2;
+
+					break;
+
+				case 3:
+
+					tag_x = 2.0;
+					tag_y = -6;
 					tag_z = 2;
 
 					break;
@@ -343,7 +402,7 @@ void CameraCalibration::publish()
 	}
 	else if (Check == "No")
 	{
-		ROS_INFO("No tag detected");
+		A = "No tag detected";
 	}
 }
 

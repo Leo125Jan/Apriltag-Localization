@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libamcl_map.pdb"
-  "/home/leo/UAY/devel/lib/libamcl_map.so"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map.c.o"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.o"
-  "CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.o"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.o"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.o"
+  "CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.o"
+  "/home/leo/UAV/devel/lib/libamcl_map.pdb"
+  "/home/leo/UAV/devel/lib/libamcl_map.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -67,14 +67,14 @@ set(navfn_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(navfn_SOURCE_PREFIX /home/leo/UAY/src/navigation/navfn)
-  set(navfn_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(navfn_SOURCE_PREFIX /home/leo/UAV/src/navigation/navfn)
+  set(navfn_DEVEL_PREFIX /home/leo/UAV/devel)
   set(navfn_INSTALL_PREFIX "")
   set(navfn_PREFIX ${navfn_DEVEL_PREFIX})
 else()
   set(navfn_SOURCE_PREFIX "")
   set(navfn_DEVEL_PREFIX "")
-  set(navfn_INSTALL_PREFIX /home/leo/UAY/install)
+  set(navfn_INSTALL_PREFIX /home/leo/UAV/install)
   set(navfn_PREFIX ${navfn_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(navfn_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/leo/UAY/devel/include;/home/leo/UAY/src/navigation/navfn/include " STREQUAL " ")
+if(NOT "/home/leo/UAV/devel/include;/home/leo/UAV/src/navigation/navfn/include " STREQUAL " ")
   set(navfn_INCLUDE_DIRS "")
-  set(_include_dirs "/home/leo/UAY/devel/include;/home/leo/UAY/src/navigation/navfn/include")
+  set(_include_dirs "/home/leo/UAV/devel/include;/home/leo/UAV/src/navigation/navfn/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/navfn " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/leo/UAY/devel/include;/home/leo/UAY/src/navigation/navfn/include "
         message(FATAL_ERROR "Project 'navfn' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'navfn' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAY/src/navigation/navfn/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'navfn' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAV/src/navigation/navfn/${idir}'.  ${_report}")
     endif()
     _list_append_unique(navfn_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/devel/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/devel/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(navfn_LIBRARIES ${navfn_LIBRARIES})
 
   _list_append_unique(navfn_LIBRARY_DIRS ${${navfn_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(navfn_EXPORTED_TARGETS ${${navfn_dep}_EXPORTED_TARGETS})
+  list(APPEND navfn_EXPORTED_TARGETS ${${navfn_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "navfn-msg-extras.cmake")

@@ -67,14 +67,14 @@ set(move_slow_and_clear_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(move_slow_and_clear_SOURCE_PREFIX /home/leo/UAY/src/navigation/move_slow_and_clear)
-  set(move_slow_and_clear_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(move_slow_and_clear_SOURCE_PREFIX /home/leo/UAV/src/navigation/move_slow_and_clear)
+  set(move_slow_and_clear_DEVEL_PREFIX /home/leo/UAV/devel)
   set(move_slow_and_clear_INSTALL_PREFIX "")
   set(move_slow_and_clear_PREFIX ${move_slow_and_clear_DEVEL_PREFIX})
 else()
   set(move_slow_and_clear_SOURCE_PREFIX "")
   set(move_slow_and_clear_DEVEL_PREFIX "")
-  set(move_slow_and_clear_INSTALL_PREFIX /home/leo/UAY/install)
+  set(move_slow_and_clear_INSTALL_PREFIX /home/leo/UAV/install)
   set(move_slow_and_clear_PREFIX ${move_slow_and_clear_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/install/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/install/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(move_slow_and_clear_LIBRARIES ${move_slow_and_clear_LIBRARIES})
 
   _list_append_unique(move_slow_and_clear_LIBRARY_DIRS ${${move_slow_and_clear_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(move_slow_and_clear_EXPORTED_TARGETS ${${move_slow_and_clear_dep}_EXPORTED_TARGETS})
+  list(APPEND move_slow_and_clear_EXPORTED_TARGETS ${${move_slow_and_clear_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

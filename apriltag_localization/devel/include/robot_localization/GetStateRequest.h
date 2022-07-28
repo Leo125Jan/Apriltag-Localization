@@ -93,16 +93,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::robot_localization::GetStateRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::robot_localization::GetStateRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::robot_localization::GetStateRequest_<ContainerAllocator> >
   : FalseType
   { };
@@ -110,6 +100,16 @@ struct IsFixedSize< ::robot_localization::GetStateRequest_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::robot_localization::GetStateRequest_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::robot_localization::GetStateRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::robot_localization::GetStateRequest_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

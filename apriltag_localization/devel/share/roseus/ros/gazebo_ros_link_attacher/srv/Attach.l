@@ -101,8 +101,8 @@
    (setq _ok __ok)
    self)
   (:ok
-   (&optional (__ok :null))
-   (if (not (eq __ok :null)) (setq _ok __ok)) _ok)
+   (&optional __ok)
+   (if __ok (setq _ok __ok)) _ok)
   (:serialization-length
    ()
    (+

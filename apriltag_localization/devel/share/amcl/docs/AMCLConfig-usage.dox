@@ -6,7 +6,7 @@
   <param name="kld_err" type="double" value="0.01" />
   <param name="kld_z" type="double" value="0.99" />
   <param name="update_min_d" type="double" value="0.2" />
-  <param name="update_min_a" type="double" value="0.5235987755982988" />
+  <param name="update_min_a" type="double" value="0.523598775598" />
   <param name="resample_interval" type="int" value="2" />
   <param name="transform_tolerance" type="double" value="0.1" />
   <param name="recovery_alpha_slow" type="double" value="0.0" />

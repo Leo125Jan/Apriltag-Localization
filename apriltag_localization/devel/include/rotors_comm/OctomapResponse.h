@@ -106,16 +106,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::rotors_comm::OctomapResponse_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::rotors_comm::OctomapResponse_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::rotors_comm::OctomapResponse_<ContainerAllocator> >
   : FalseType
   { };
@@ -123,6 +113,16 @@ struct IsFixedSize< ::rotors_comm::OctomapResponse_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::rotors_comm::OctomapResponse_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rotors_comm::OctomapResponse_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rotors_comm::OctomapResponse_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

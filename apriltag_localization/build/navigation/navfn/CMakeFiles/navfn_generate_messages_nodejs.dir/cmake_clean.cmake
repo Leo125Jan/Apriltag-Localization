@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/share/gennodejs/ros/navfn/srv/MakeNavPlan.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/navfn/srv/SetCostmap.js"
   "CMakeFiles/navfn_generate_messages_nodejs"
+  "/home/leo/UAV/devel/share/gennodejs/ros/navfn/srv/MakeNavPlan.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/navfn/srv/SetCostmap.js"
 )
 
 # Per-language clean rules from dependency scanning.

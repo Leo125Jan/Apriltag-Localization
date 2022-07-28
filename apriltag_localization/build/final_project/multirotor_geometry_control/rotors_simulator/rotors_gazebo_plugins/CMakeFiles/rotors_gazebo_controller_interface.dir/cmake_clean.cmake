@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/librotors_gazebo_controller_interface.pdb"
-  "/home/leo/UAY/devel/lib/librotors_gazebo_controller_interface.so"
   "CMakeFiles/rotors_gazebo_controller_interface.dir/src/gazebo_controller_interface.cpp.o"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_controller_interface.pdb"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_controller_interface.so"
 )
 
 # Per-language clean rules from dependency scanning.

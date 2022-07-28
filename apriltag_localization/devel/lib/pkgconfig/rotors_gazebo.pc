@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/devel
+prefix=/home/leo/UAV/devel
 
 Name: rotors_gazebo
 Description: Description of rotors_gazebo

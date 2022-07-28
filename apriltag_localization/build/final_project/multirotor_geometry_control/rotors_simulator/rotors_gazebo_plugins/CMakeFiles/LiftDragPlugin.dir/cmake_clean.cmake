@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libLiftDragPlugin.pdb"
-  "/home/leo/UAY/devel/lib/libLiftDragPlugin.so"
   "CMakeFiles/LiftDragPlugin.dir/src/liftdrag_plugin/liftdrag_plugin.cpp.o"
+  "/home/leo/UAV/devel/lib/libLiftDragPlugin.pdb"
+  "/home/leo/UAV/devel/lib/libLiftDragPlugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

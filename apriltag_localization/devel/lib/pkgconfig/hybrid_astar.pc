@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/devel
+prefix=/home/leo/UAV/devel
 
 Name: hybrid_astar
 Description: Description of hybrid_astar

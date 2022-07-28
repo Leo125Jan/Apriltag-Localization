@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/navigation/navfn/test
+# Install script for directory: /home/leo/UAV/src/navigation/navfn/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

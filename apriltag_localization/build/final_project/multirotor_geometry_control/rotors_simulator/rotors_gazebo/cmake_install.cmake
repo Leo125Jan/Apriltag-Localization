@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo
+# Install script for directory: /home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,34 +38,34 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/catkin_generated/installspace/rotors_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/catkin_generated/installspace/rotors_gazebo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/catkin_generated/installspace/rotors_gazeboConfig.cmake"
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/catkin_generated/installspace/rotors_gazeboConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/catkin_generated/installspace/rotors_gazeboConfig.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/catkin_generated/installspace/rotors_gazeboConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo" TYPE FILE FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo" TYPE FILE FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/launch" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/launch" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/launch/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/models" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/models/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/models" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/models/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/resource" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/resource/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/resource" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/resource/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/worlds" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/worlds/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_gazebo/worlds" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/worlds/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -75,12 +75,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo" TYPE EXECUTABLE FILES "/home/leo/UAY/devel/lib/rotors_gazebo/waypoint_publisher")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo" TYPE EXECUTABLE FILES "/home/leo/UAV/devel/lib/rotors_gazebo/waypoint_publisher")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher")
@@ -95,12 +95,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher_file"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo" TYPE EXECUTABLE FILES "/home/leo/UAY/devel/lib/rotors_gazebo/waypoint_publisher_file")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo" TYPE EXECUTABLE FILES "/home/leo/UAV/devel/lib/rotors_gazebo/waypoint_publisher_file")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher_file" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher_file")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher_file"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/waypoint_publisher_file")
@@ -115,12 +115,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/hovering_example"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo" TYPE EXECUTABLE FILES "/home/leo/UAY/devel/lib/rotors_gazebo/hovering_example")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo" TYPE EXECUTABLE FILES "/home/leo/UAV/devel/lib/rotors_gazebo/hovering_example")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/hovering_example" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/hovering_example")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/hovering_example"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_gazebo/hovering_example")

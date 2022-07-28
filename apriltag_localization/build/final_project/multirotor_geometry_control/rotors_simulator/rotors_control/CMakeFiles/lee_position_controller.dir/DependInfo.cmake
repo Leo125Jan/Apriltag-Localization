@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/src/library/lee_position_controller.cpp" "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/CMakeFiles/lee_position_controller.dir/src/library/lee_position_controller.cpp.o"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/src/library/lee_position_controller.cpp" "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/CMakeFiles/lee_position_controller.dir/src/library/lee_position_controller.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -13,16 +13,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
   "ROS_PACKAGE_NAME=\"rotors_control\""
-  "lee_position_controller_EXPORTS"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/include"
-  "/home/leo/UAY/devel/include"
-  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_msgs/include"
-  "/opt/ros/noetic/include"
-  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/include"
+  "/home/leo/UAV/devel/include"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/mav_comm/mav_msgs/include"
+  "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
   )
 

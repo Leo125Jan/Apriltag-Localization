@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/share/common-lisp/ros/navfn/srv/MakeNavPlan.lisp"
-  "/home/leo/UAY/devel/share/common-lisp/ros/navfn/srv/SetCostmap.lisp"
   "CMakeFiles/navfn_generate_messages_lisp"
+  "/home/leo/UAV/devel/share/common-lisp/ros/navfn/srv/MakeNavPlan.lisp"
+  "/home/leo/UAV/devel/share/common-lisp/ros/navfn/srv/SetCostmap.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

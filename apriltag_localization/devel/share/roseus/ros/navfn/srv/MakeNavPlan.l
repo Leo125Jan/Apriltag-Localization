@@ -87,7 +87,7 @@
    (&key
     ((:plan_found __plan_found) 0)
     ((:error_message __error_message) "")
-    ((:path __path) ())
+    ((:path __path) (let (r) (dotimes (i 0) (push (instance geometry_msgs::PoseStamped :init) r)) r))
     )
    (send-super :init)
    (setq _plan_found (round __plan_found))

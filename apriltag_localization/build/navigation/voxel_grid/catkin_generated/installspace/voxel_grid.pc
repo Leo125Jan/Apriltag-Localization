@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/install
+prefix=/home/leo/UAV/install
 
 Name: voxel_grid
 Description: Description of voxel_grid

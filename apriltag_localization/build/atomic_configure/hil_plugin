@@ -1,9 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 # -*- coding: utf-8 -*-
 # generated from catkin/cmake/template/script.py.in
 # creates a relay to a python script source file, acting as that file.
 # The purpose is that of a symlink
-python_script = '/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rqt_rotors/scripts/hil_plugin'
+python_script = '/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rqt_rotors/scripts/hil_plugin'
 with open(python_script, 'r') as fh:
     context = {
         '__builtins__': __builtins__,

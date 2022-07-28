@@ -67,14 +67,14 @@ set(base_local_planner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(base_local_planner_SOURCE_PREFIX /home/leo/UAY/src/navigation/base_local_planner)
-  set(base_local_planner_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(base_local_planner_SOURCE_PREFIX /home/leo/UAV/src/navigation/base_local_planner)
+  set(base_local_planner_DEVEL_PREFIX /home/leo/UAV/devel)
   set(base_local_planner_INSTALL_PREFIX "")
   set(base_local_planner_PREFIX ${base_local_planner_DEVEL_PREFIX})
 else()
   set(base_local_planner_SOURCE_PREFIX "")
   set(base_local_planner_DEVEL_PREFIX "")
-  set(base_local_planner_INSTALL_PREFIX /home/leo/UAY/install)
+  set(base_local_planner_INSTALL_PREFIX /home/leo/UAV/install)
   set(base_local_planner_PREFIX ${base_local_planner_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/install/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/install/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(base_local_planner_LIBRARIES ${base_local_planner_LIBRARIES})
 
   _list_append_unique(base_local_planner_LIBRARY_DIRS ${${base_local_planner_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(base_local_planner_EXPORTED_TARGETS ${${base_local_planner_dep}_EXPORTED_TARGETS})
+  list(APPEND base_local_planner_EXPORTED_TARGETS ${${base_local_planner_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "base_local_planner-msg-extras.cmake")

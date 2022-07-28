@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/install
+prefix=/home/leo/UAV/install
 
 Name: map_server
 Description: Description of map_server

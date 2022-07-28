@@ -126,16 +126,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::costmap_2d::VoxelGrid_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::costmap_2d::VoxelGrid_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::costmap_2d::VoxelGrid_<ContainerAllocator> >
   : FalseType
   { };
@@ -143,6 +133,16 @@ struct IsFixedSize< ::costmap_2d::VoxelGrid_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::costmap_2d::VoxelGrid_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::costmap_2d::VoxelGrid_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::costmap_2d::VoxelGrid_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

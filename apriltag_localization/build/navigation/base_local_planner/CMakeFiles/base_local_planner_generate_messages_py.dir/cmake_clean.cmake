@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/python3/dist-packages/base_local_planner/msg/_Position2DInt.py"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/base_local_planner/msg/__init__.py"
   "CMakeFiles/base_local_planner_generate_messages_py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/base_local_planner/msg/_Position2DInt.py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/base_local_planner/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

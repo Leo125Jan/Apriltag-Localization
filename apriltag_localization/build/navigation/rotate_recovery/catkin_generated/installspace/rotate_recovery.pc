@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/install
+prefix=/home/leo/UAV/install
 
 Name: rotate_recovery
 Description: Description of rotate_recovery

@@ -102,6 +102,8 @@ target_link_libraries(Error_C_OOP ${catkin_LIBRARIES})
 add_executable(Error_C_OOP_ver2 src/Error_C_OOP_ver2.cpp)
 target_link_libraries(Error_C_OOP_ver2 ${catkin_LIBRARIES})
 
+add_executable(imu_coord_enu src/imu_coord_enu.cpp)
+target_link_libraries(imu_coord_enu ${catkin_LIBRARIES})
 
 foreach(dir launch models resource worlds)
    install(DIRECTORY ${dir}/

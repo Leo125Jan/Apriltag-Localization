@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/rotors_gazebo/hovering_example"
-  "/home/leo/UAY/devel/lib/rotors_gazebo/hovering_example.pdb"
   "CMakeFiles/hovering_example.dir/src/hovering_example.cpp.o"
+  "/home/leo/UAV/devel/lib/rotors_gazebo/hovering_example.pdb"
+  "/home/leo/UAV/devel/lib/rotors_gazebo/hovering_example"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/include/global_planner/GlobalPlannerConfig.h"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/global_planner/cfg/GlobalPlannerConfig.py"
-  "/home/leo/UAY/devel/share/global_planner/docs/GlobalPlannerConfig-usage.dox"
-  "/home/leo/UAY/devel/share/global_planner/docs/GlobalPlannerConfig.dox"
-  "/home/leo/UAY/devel/share/global_planner/docs/GlobalPlannerConfig.wikidoc"
   "CMakeFiles/global_planner_gencfg"
+  "/home/leo/UAV/devel/include/global_planner/GlobalPlannerConfig.h"
+  "/home/leo/UAV/devel/share/global_planner/docs/GlobalPlannerConfig.dox"
+  "/home/leo/UAV/devel/share/global_planner/docs/GlobalPlannerConfig-usage.dox"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/global_planner/cfg/GlobalPlannerConfig.py"
+  "/home/leo/UAV/devel/share/global_planner/docs/GlobalPlannerConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

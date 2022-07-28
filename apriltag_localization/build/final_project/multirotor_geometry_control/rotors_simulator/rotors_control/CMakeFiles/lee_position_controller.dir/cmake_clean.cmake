@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/liblee_position_controller.pdb"
-  "/home/leo/UAY/devel/lib/liblee_position_controller.so"
   "CMakeFiles/lee_position_controller.dir/src/library/lee_position_controller.cpp.o"
+  "/home/leo/UAV/devel/lib/liblee_position_controller.pdb"
+  "/home/leo/UAV/devel/lib/liblee_position_controller.so"
 )
 
 # Per-language clean rules from dependency scanning.

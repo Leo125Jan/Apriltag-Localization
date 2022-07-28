@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libapriltag_ros_single_image_detector.pdb"
-  "/home/leo/UAY/devel/lib/libapriltag_ros_single_image_detector.so"
   "CMakeFiles/apriltag_ros_single_image_detector.dir/src/single_image_detector.cpp.o"
+  "/home/leo/UAV/devel/lib/libapriltag_ros_single_image_detector.pdb"
+  "/home/leo/UAV/devel/lib/libapriltag_ros_single_image_detector.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/include/move_base/MoveBaseConfig.h"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/move_base/cfg/MoveBaseConfig.py"
-  "/home/leo/UAY/devel/share/move_base/docs/MoveBaseConfig-usage.dox"
-  "/home/leo/UAY/devel/share/move_base/docs/MoveBaseConfig.dox"
-  "/home/leo/UAY/devel/share/move_base/docs/MoveBaseConfig.wikidoc"
   "CMakeFiles/move_base_gencfg"
+  "/home/leo/UAV/devel/include/move_base/MoveBaseConfig.h"
+  "/home/leo/UAV/devel/share/move_base/docs/MoveBaseConfig.dox"
+  "/home/leo/UAV/devel/share/move_base/docs/MoveBaseConfig-usage.dox"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/move_base/cfg/MoveBaseConfig.py"
+  "/home/leo/UAV/devel/share/move_base/docs/MoveBaseConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

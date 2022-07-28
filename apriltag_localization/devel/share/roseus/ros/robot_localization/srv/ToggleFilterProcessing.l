@@ -31,8 +31,8 @@
    (setq _on __on)
    self)
   (:on
-   (&optional (__on :null))
-   (if (not (eq __on :null)) (setq _on __on)) _on)
+   (&optional __on)
+   (if __on (setq _on __on)) _on)
   (:serialization-length
    ()
    (+
@@ -68,8 +68,8 @@
    (setq _status __status)
    self)
   (:status
-   (&optional (__status :null))
-   (if (not (eq __status :null)) (setq _status __status)) _status)
+   (&optional __status)
+   (if __status (setq _status __status)) _status)
   (:serialization-length
    ()
    (+

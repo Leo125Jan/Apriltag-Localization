@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/husky/husky_msgs
+# Install script for directory: /home/leo/UAV/src/final_project/husky/husky_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,53 +38,53 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs/msg" TYPE FILE FILES "/home/leo/UAY/src/final_project/husky/husky_msgs/msg/HuskyStatus.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs/msg" TYPE FILE FILES "/home/leo/UAV/src/final_project/husky/husky_msgs/msg/HuskyStatus.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs/cmake" TYPE FILE FILES "/home/leo/UAY/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs/cmake" TYPE FILE FILES "/home/leo/UAV/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/leo/UAY/devel/include/husky_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/leo/UAV/devel/include/husky_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/leo/UAY/devel/share/roseus/ros/husky_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/leo/UAV/devel/share/roseus/ros/husky_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/leo/UAY/devel/share/common-lisp/ros/husky_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/leo/UAV/devel/share/common-lisp/ros/husky_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/leo/UAY/devel/share/gennodejs/ros/husky_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/leo/UAV/devel/share/gennodejs/ros/husky_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/leo/UAY/devel/lib/python3/dist-packages/husky_msgs")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/leo/UAV/devel/lib/python2.7/dist-packages/husky_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/leo/UAY/devel/lib/python3/dist-packages/husky_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/leo/UAV/devel/lib/python2.7/dist-packages/husky_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs/cmake" TYPE FILE FILES "/home/leo/UAY/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs/cmake" TYPE FILE FILES "/home/leo/UAV/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgsConfig.cmake"
-    "/home/leo/UAY/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgsConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgsConfig.cmake"
+    "/home/leo/UAV/build/final_project/husky/husky_msgs/catkin_generated/installspace/husky_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs" TYPE FILE FILES "/home/leo/UAY/src/final_project/husky/husky_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_msgs" TYPE FILE FILES "/home/leo/UAV/src/final_project/husky/husky_msgs/package.xml")
 endif()
 

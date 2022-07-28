@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libroll_pitch_yawrate_thrust_controller.pdb"
-  "/home/leo/UAY/devel/lib/libroll_pitch_yawrate_thrust_controller.so"
   "CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o"
+  "/home/leo/UAV/devel/lib/libroll_pitch_yawrate_thrust_controller.pdb"
+  "/home/leo/UAV/devel/lib/libroll_pitch_yawrate_thrust_controller.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/install
+prefix=/home/leo/UAV/install
 
 Name: move_slow_and_clear
 Description: Description of move_slow_and_clear

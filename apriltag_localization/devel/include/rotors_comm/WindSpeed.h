@@ -95,16 +95,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::rotors_comm::WindSpeed_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::rotors_comm::WindSpeed_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::rotors_comm::WindSpeed_<ContainerAllocator> >
   : FalseType
   { };
@@ -112,6 +102,16 @@ struct IsFixedSize< ::rotors_comm::WindSpeed_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::rotors_comm::WindSpeed_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rotors_comm::WindSpeed_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::rotors_comm::WindSpeed_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

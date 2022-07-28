@@ -20,7 +20,7 @@
   (:init
    (&key
     ((:hull __hull) (instance mav_planning_msgs::Polygon2D :init))
-    ((:holes __holes) ())
+    ((:holes __holes) (let (r) (dotimes (i 0) (push (instance mav_planning_msgs::Polygon2D :init) r)) r))
     )
    (send-super :init)
    (setq _hull __hull)

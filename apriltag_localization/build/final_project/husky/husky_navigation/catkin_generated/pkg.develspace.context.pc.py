@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "husky_navigation"
-PROJECT_SPACE_DIR = "/home/leo/UAY/devel"
+PROJECT_SPACE_DIR = "/home/leo/UAV/devel"
 PROJECT_VERSION = "0.6.2"

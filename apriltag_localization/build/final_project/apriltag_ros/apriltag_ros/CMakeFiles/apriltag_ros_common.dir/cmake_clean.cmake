@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libapriltag_ros_common.pdb"
-  "/home/leo/UAY/devel/lib/libapriltag_ros_common.so"
   "CMakeFiles/apriltag_ros_common.dir/src/common_functions.cpp.o"
+  "/home/leo/UAV/devel/lib/libapriltag_ros_common.pdb"
+  "/home/leo/UAV/devel/lib/libapriltag_ros_common.so"
 )
 
 # Per-language clean rules from dependency scanning.

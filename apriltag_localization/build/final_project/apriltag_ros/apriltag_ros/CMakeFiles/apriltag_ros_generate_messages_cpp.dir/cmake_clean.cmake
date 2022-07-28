@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/include/apriltag_ros/AnalyzeSingleImage.h"
-  "/home/leo/UAY/devel/include/apriltag_ros/AprilTagDetection.h"
-  "/home/leo/UAY/devel/include/apriltag_ros/AprilTagDetectionArray.h"
   "CMakeFiles/apriltag_ros_generate_messages_cpp"
+  "/home/leo/UAV/devel/include/apriltag_ros/AprilTagDetectionArray.h"
+  "/home/leo/UAV/devel/include/apriltag_ros/AprilTagDetection.h"
+  "/home/leo/UAV/devel/include/apriltag_ros/AnalyzeSingleImage.h"
 )
 
 # Per-language clean rules from dependency scanning.

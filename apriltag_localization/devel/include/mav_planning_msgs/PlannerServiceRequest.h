@@ -116,16 +116,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::mav_planning_msgs::PlannerServiceRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::mav_planning_msgs::PlannerServiceRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::mav_planning_msgs::PlannerServiceRequest_<ContainerAllocator> >
   : FalseType
   { };
@@ -133,6 +123,16 @@ struct IsFixedSize< ::mav_planning_msgs::PlannerServiceRequest_<ContainerAllocat
 template <class ContainerAllocator>
 struct IsFixedSize< ::mav_planning_msgs::PlannerServiceRequest_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_planning_msgs::PlannerServiceRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_planning_msgs::PlannerServiceRequest_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

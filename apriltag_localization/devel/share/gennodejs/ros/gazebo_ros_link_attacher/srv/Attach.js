@@ -84,10 +84,10 @@ class AttachRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.model_name_1);
-    length += _getByteLength(object.link_name_1);
-    length += _getByteLength(object.model_name_2);
-    length += _getByteLength(object.link_name_2);
+    length += object.model_name_1.length;
+    length += object.link_name_1.length;
+    length += object.model_name_2.length;
+    length += object.link_name_2.length;
     return length + 16;
   }
 

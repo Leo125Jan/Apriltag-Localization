@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "costmap_2d;geometry_msgs;nav_core;pluginlib;roscpp;tf2;tf2_ros".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lrotate_recovery".split(';') if "-lrotate_recovery" != "" else []
 PROJECT_NAME = "rotate_recovery"
-PROJECT_SPACE_DIR = "/home/leo/UAY/install"
+PROJECT_SPACE_DIR = "/home/leo/UAV/install"
 PROJECT_VERSION = "1.17.1"

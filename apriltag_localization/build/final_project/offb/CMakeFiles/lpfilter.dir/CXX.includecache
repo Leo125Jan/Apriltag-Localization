@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leo/UAV/src/final_project/offb/include/lpf.cpp
+lpf.h
+/home/leo/UAV/src/final_project/offb/include/lpf.h
+
+/home/leo/UAV/src/final_project/offb/include/lpf.h
+math.h
+/home/leo/UAV/src/final_project/offb/include/math.h
+

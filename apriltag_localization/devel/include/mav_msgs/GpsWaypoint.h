@@ -124,16 +124,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::mav_msgs::GpsWaypoint_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::mav_msgs::GpsWaypoint_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::mav_msgs::GpsWaypoint_<ContainerAllocator> >
   : FalseType
   { };
@@ -141,6 +131,16 @@ struct IsFixedSize< ::mav_msgs::GpsWaypoint_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::mav_msgs::GpsWaypoint_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_msgs::GpsWaypoint_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_msgs::GpsWaypoint_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/costmap_2d/footprint_tests"
-  "/home/leo/UAY/devel/lib/costmap_2d/footprint_tests.pdb"
   "CMakeFiles/footprint_tests.dir/test/footprint_tests.cpp.o"
+  "/home/leo/UAV/devel/lib/costmap_2d/footprint_tests.pdb"
+  "/home/leo/UAV/devel/lib/costmap_2d/footprint_tests"
 )
 
 # Per-language clean rules from dependency scanning.

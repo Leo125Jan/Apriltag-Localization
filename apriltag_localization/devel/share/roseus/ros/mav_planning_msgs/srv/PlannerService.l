@@ -140,8 +140,8 @@
    (setq _sampled_plan __sampled_plan)
    self)
   (:success
-   (&optional (__success :null))
-   (if (not (eq __success :null)) (setq _success __success)) _success)
+   (&optional __success)
+   (if __success (setq _success __success)) _success)
   (:polynomial_plan
    (&rest __polynomial_plan)
    (if (keywordp (car __polynomial_plan))

@@ -208,16 +208,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::husky_msgs::HuskyStatus_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::husky_msgs::HuskyStatus_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::husky_msgs::HuskyStatus_<ContainerAllocator> >
   : FalseType
   { };
@@ -225,6 +215,16 @@ struct IsFixedSize< ::husky_msgs::HuskyStatus_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::husky_msgs::HuskyStatus_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::husky_msgs::HuskyStatus_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::husky_msgs::HuskyStatus_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/devel
+prefix=/home/leo/UAV/devel
 
 Name: rotors_description
 Description: Description of rotors_description

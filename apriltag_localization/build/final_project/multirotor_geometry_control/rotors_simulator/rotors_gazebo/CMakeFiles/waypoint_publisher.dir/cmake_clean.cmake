@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/rotors_gazebo/waypoint_publisher"
-  "/home/leo/UAY/devel/lib/rotors_gazebo/waypoint_publisher.pdb"
   "CMakeFiles/waypoint_publisher.dir/src/waypoint_publisher.cpp.o"
+  "/home/leo/UAV/devel/lib/rotors_gazebo/waypoint_publisher.pdb"
+  "/home/leo/UAV/devel/lib/rotors_gazebo/waypoint_publisher"
 )
 
 # Per-language clean rules from dependency scanning.

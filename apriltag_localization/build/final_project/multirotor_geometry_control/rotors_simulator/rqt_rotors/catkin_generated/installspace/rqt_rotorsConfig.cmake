@@ -67,14 +67,14 @@ set(rqt_rotors_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rqt_rotors_SOURCE_PREFIX /home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rqt_rotors)
-  set(rqt_rotors_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(rqt_rotors_SOURCE_PREFIX /home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rqt_rotors)
+  set(rqt_rotors_DEVEL_PREFIX /home/leo/UAV/devel)
   set(rqt_rotors_INSTALL_PREFIX "")
   set(rqt_rotors_PREFIX ${rqt_rotors_DEVEL_PREFIX})
 else()
   set(rqt_rotors_SOURCE_PREFIX "")
   set(rqt_rotors_DEVEL_PREFIX "")
-  set(rqt_rotors_INSTALL_PREFIX /home/leo/UAY/install)
+  set(rqt_rotors_INSTALL_PREFIX /home/leo/UAV/install)
   set(rqt_rotors_PREFIX ${rqt_rotors_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/install/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/install/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(rqt_rotors_LIBRARIES ${rqt_rotors_LIBRARIES})
 
   _list_append_unique(rqt_rotors_LIBRARY_DIRS ${${rqt_rotors_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(rqt_rotors_EXPORTED_TARGETS ${${rqt_rotors_dep}_EXPORTED_TARGETS})
+  list(APPEND rqt_rotors_EXPORTED_TARGETS ${${rqt_rotors_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

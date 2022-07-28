@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/share/gennodejs/ros/apriltag_ros/msg/AprilTagDetection.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/apriltag_ros/msg/AprilTagDetectionArray.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/apriltag_ros/srv/AnalyzeSingleImage.js"
   "CMakeFiles/apriltag_ros_generate_messages_nodejs"
+  "/home/leo/UAV/devel/share/gennodejs/ros/apriltag_ros/msg/AprilTagDetectionArray.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/apriltag_ros/msg/AprilTagDetection.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/apriltag_ros/srv/AnalyzeSingleImage.js"
 )
 
 # Per-language clean rules from dependency scanning.

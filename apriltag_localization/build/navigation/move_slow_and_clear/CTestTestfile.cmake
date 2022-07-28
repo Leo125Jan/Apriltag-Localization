@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/leo/UAY/src/navigation/move_slow_and_clear
-# Build directory: /home/leo/UAY/build/navigation/move_slow_and_clear
+# Source directory: /home/leo/UAV/src/navigation/move_slow_and_clear
+# Build directory: /home/leo/UAV/build/navigation/move_slow_and_clear
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/fake_localization/fake_localization"
-  "/home/leo/UAY/devel/lib/fake_localization/fake_localization.pdb"
   "CMakeFiles/fake_localization.dir/fake_localization.cpp.o"
+  "/home/leo/UAV/devel/lib/fake_localization/fake_localization.pdb"
+  "/home/leo/UAV/devel/lib/fake_localization/fake_localization"
 )
 
 # Per-language clean rules from dependency scanning.

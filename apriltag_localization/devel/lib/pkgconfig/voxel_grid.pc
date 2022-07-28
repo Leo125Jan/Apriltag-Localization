@@ -1,8 +1,8 @@
-prefix=/home/leo/UAY/devel
+prefix=/home/leo/UAV/devel
 
 Name: voxel_grid
 Description: Description of voxel_grid
 Version: 1.17.1
-Cflags: -I/home/leo/UAY/src/navigation/voxel_grid/include
+Cflags: -I/home/leo/UAV/src/navigation/voxel_grid/include
 Libs: -L${prefix}/lib -lvoxel_grid
 Requires: roscpp

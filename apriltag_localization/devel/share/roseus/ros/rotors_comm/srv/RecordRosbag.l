@@ -31,8 +31,8 @@
    (setq _record __record)
    self)
   (:record
-   (&optional (__record :null))
-   (if (not (eq __record :null)) (setq _record __record)) _record)
+   (&optional __record)
+   (if __record (setq _record __record)) _record)
   (:serialization-length
    ()
    (+
@@ -68,8 +68,8 @@
    (setq _success __success)
    self)
   (:success
-   (&optional (__success :null))
-   (if (not (eq __success :null)) (setq _success __success)) _success)
+   (&optional __success)
+   (if __success (setq _success __success)) _success)
   (:serialization-length
    ()
    (+

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/include/amcl/AMCLConfig.h"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/amcl/cfg/AMCLConfig.py"
-  "/home/leo/UAY/devel/share/amcl/docs/AMCLConfig-usage.dox"
-  "/home/leo/UAY/devel/share/amcl/docs/AMCLConfig.dox"
-  "/home/leo/UAY/devel/share/amcl/docs/AMCLConfig.wikidoc"
   "CMakeFiles/amcl_gencfg"
+  "/home/leo/UAV/devel/include/amcl/AMCLConfig.h"
+  "/home/leo/UAV/devel/share/amcl/docs/AMCLConfig.dox"
+  "/home/leo/UAV/devel/share/amcl/docs/AMCLConfig-usage.dox"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/amcl/cfg/AMCLConfig.py"
+  "/home/leo/UAV/devel/share/amcl/docs/AMCLConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

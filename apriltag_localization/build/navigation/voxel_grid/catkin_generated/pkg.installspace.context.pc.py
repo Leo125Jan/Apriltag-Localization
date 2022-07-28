@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lvoxel_grid".split(';') if "-lvoxel_grid" != "" else []
 PROJECT_NAME = "voxel_grid"
-PROJECT_SPACE_DIR = "/home/leo/UAY/install"
+PROJECT_SPACE_DIR = "/home/leo/UAV/install"
 PROJECT_VERSION = "1.17.1"

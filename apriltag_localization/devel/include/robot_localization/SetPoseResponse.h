@@ -71,22 +71,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::robot_localization::SetPoseResponse_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::robot_localization::SetPoseResponse_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::robot_localization::SetPoseResponse_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::robot_localization::SetPoseResponse_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::robot_localization::SetPoseResponse_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::robot_localization::SetPoseResponse_<ContainerAllocator> const>
   : TrueType
   { };
 

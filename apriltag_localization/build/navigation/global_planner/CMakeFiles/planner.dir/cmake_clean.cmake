@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/global_planner/planner"
-  "/home/leo/UAY/devel/lib/global_planner/planner.pdb"
   "CMakeFiles/planner.dir/src/plan_node.cpp.o"
+  "/home/leo/UAV/devel/lib/global_planner/planner.pdb"
+  "/home/leo/UAV/devel/lib/global_planner/planner"
 )
 
 # Per-language clean rules from dependency scanning.

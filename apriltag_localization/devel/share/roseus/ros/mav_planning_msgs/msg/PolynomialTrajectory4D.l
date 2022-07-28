@@ -22,7 +22,7 @@
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:segments __segments) ())
+    ((:segments __segments) (let (r) (dotimes (i 0) (push (instance mav_planning_msgs::PolynomialSegment4D :init) r)) r))
     )
    (send-super :init)
    (setq _header __header)

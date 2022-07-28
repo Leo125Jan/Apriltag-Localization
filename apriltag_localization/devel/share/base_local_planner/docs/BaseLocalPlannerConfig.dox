@@ -12,13 +12,13 @@ Reads and maintains the following parameters on the ROS server
 - \b "~min_in_place_vel_theta" : \b [double] The absolute value of the minimum in-place rotational velocity the controller will explore min: 0.0, default: 0.4, max: 20.0
 - \b "~sim_time" : \b [double] The amount of time to roll trajectories out for in seconds min: 0.0, default: 1.7, max: 10.0
 - \b "~sim_granularity" : \b [double] The granularity with which to check for collisions along each trajectory in meters min: 0.0, default: 0.025, max: 5.0
-- \b "~angular_sim_granularity" : \b [double] The distance between simulation points for angular velocity should be small enough that the robot doesn't hit things min: 0.0, default: 0.025, max: 1.5707963267948966
+- \b "~angular_sim_granularity" : \b [double] The distance between simulation points for angular velocity should be small enough that the robot doesn't hit things min: 0.0, default: 0.025, max: 1.57079632679
 - \b "~path_distance_bias" : \b [double] The weight for the path distance part of the cost function min: 0.0, default: 0.6, max: 5.0
 - \b "~goal_distance_bias" : \b [double] The weight for the goal distance part of the cost function min: 0.0, default: 0.8, max: 5.0
 - \b "~occdist_scale" : \b [double] The weight for the obstacle distance part of the cost function min: 0.0, default: 0.01, max: 5.0
 - \b "~oscillation_reset_dist" : \b [double] The distance the robot must travel before oscillation flags are reset, in meters min: 0.0, default: 0.05, max: 5.0
 - \b "~escape_reset_dist" : \b [double] The distance the robot must travel before oscillation flags are reset, in meters min: 0.0, default: 0.1, max: 5.0
-- \b "~escape_reset_theta" : \b [double] The distance the robot must travel before oscillation flags are reset, in meters min: 0.0, default: 1.5707963267948966, max: 5.0
+- \b "~escape_reset_theta" : \b [double] The distance the robot must travel before oscillation flags are reset, in meters min: 0.0, default: 1.57079632679, max: 5.0
 - \b "~vx_samples" : \b [int] The number of samples to use when exploring the x velocity space min: 1, default: 20, max: 300
 - \b "~vtheta_samples" : \b [int] The number of samples to use when exploring the theta velocity space min: 1, default: 20, max: 300
 - \b "~heading_lookahead" : \b [double] How far the robot should look ahead of itself when differentiating between different rotational velocities min: 0.0, default: 0.325, max: 5.0

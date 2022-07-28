@@ -67,14 +67,14 @@ set(gazebo_ros_link_attacher_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(gazebo_ros_link_attacher_SOURCE_PREFIX /home/leo/UAY/src/gazebo_ros_link_attacher)
-  set(gazebo_ros_link_attacher_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(gazebo_ros_link_attacher_SOURCE_PREFIX /home/leo/UAV/src/gazebo_ros_link_attacher)
+  set(gazebo_ros_link_attacher_DEVEL_PREFIX /home/leo/UAV/devel)
   set(gazebo_ros_link_attacher_INSTALL_PREFIX "")
   set(gazebo_ros_link_attacher_PREFIX ${gazebo_ros_link_attacher_DEVEL_PREFIX})
 else()
   set(gazebo_ros_link_attacher_SOURCE_PREFIX "")
   set(gazebo_ros_link_attacher_DEVEL_PREFIX "")
-  set(gazebo_ros_link_attacher_INSTALL_PREFIX /home/leo/UAY/install)
+  set(gazebo_ros_link_attacher_INSTALL_PREFIX /home/leo/UAV/install)
   set(gazebo_ros_link_attacher_PREFIX ${gazebo_ros_link_attacher_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/install/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/install/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(gazebo_ros_link_attacher_LIBRARIES ${gazebo_ros_link_attacher_LIBRARIES})
 
   _list_append_unique(gazebo_ros_link_attacher_LIBRARY_DIRS ${${gazebo_ros_link_attacher_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(gazebo_ros_link_attacher_EXPORTED_TARGETS ${${gazebo_ros_link_attacher_dep}_EXPORTED_TARGETS})
+  list(APPEND gazebo_ros_link_attacher_EXPORTED_TARGETS ${${gazebo_ros_link_attacher_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "gazebo_ros_link_attacher-msg-extras.cmake")

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/apriltag_ros/apriltag_ros_single_image_server_node"
-  "/home/leo/UAY/devel/lib/apriltag_ros/apriltag_ros_single_image_server_node.pdb"
   "CMakeFiles/apriltag_ros_single_image_server_node.dir/src/apriltag_ros_single_image_server_node.cpp.o"
+  "/home/leo/UAV/devel/lib/apriltag_ros/apriltag_ros_single_image_server_node.pdb"
+  "/home/leo/UAV/devel/lib/apriltag_ros/apriltag_ros_single_image_server_node"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -67,14 +67,14 @@ set(robot_localization_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(robot_localization_SOURCE_PREFIX /home/leo/UAY/src/robot_localization-noetic-devel)
-  set(robot_localization_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(robot_localization_SOURCE_PREFIX /home/leo/UAV/src/robot_localization-melodic-devel)
+  set(robot_localization_DEVEL_PREFIX /home/leo/UAV/devel)
   set(robot_localization_INSTALL_PREFIX "")
   set(robot_localization_PREFIX ${robot_localization_DEVEL_PREFIX})
 else()
   set(robot_localization_SOURCE_PREFIX "")
   set(robot_localization_DEVEL_PREFIX "")
-  set(robot_localization_INSTALL_PREFIX /home/leo/UAY/install)
+  set(robot_localization_INSTALL_PREFIX /home/leo/UAV/install)
   set(robot_localization_PREFIX ${robot_localization_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(robot_localization_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/leo/UAY/devel/include;/home/leo/UAY/src/robot_localization-noetic-devel/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
+if(NOT "/home/leo/UAV/devel/include;/home/leo/UAV/src/robot_localization-melodic-devel/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
   set(robot_localization_INCLUDE_DIRS "")
-  set(_include_dirs "/home/leo/UAY/devel/include;/home/leo/UAY/src/robot_localization-noetic-devel/include;/usr/include/eigen3;/usr/include")
+  set(_include_dirs "/home/leo/UAV/devel/include;/home/leo/UAV/src/robot_localization-melodic-devel/include;/usr/include/eigen3;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/robot_localization " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/leo/UAY/devel/include;/home/leo/UAY/src/robot_localization-noetic-
         message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAY/src/robot_localization-noetic-devel/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'robot_localization' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAV/src/robot_localization-melodic-devel/${idir}'.  ${_report}")
     endif()
     _list_append_unique(robot_localization_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/devel/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/devel/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${robot_localization_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "angles;cmake_modules;diagnostic_msgs;diagnostic_updater;eigen_conversions;geographic_msgs;geometry_msgs;message_filters;message_runtime;nav_msgs;roscpp;sensor_msgs;std_msgs;std_srvs;tf2;tf2_geometry_msgs;tf2_ros")
+set(depends "cmake_modules;diagnostic_msgs;diagnostic_updater;eigen_conversions;geographic_msgs;geometry_msgs;message_filters;message_runtime;nav_msgs;roscpp;sensor_msgs;std_msgs;std_srvs;tf2;tf2_geometry_msgs;tf2_ros")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(robot_localization_LIBRARIES ${robot_localization_LIBRARIES})
 
   _list_append_unique(robot_localization_LIBRARY_DIRS ${${robot_localization_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(robot_localization_EXPORTED_TARGETS ${${robot_localization_dep}_EXPORTED_TARGETS})
+  list(APPEND robot_localization_EXPORTED_TARGETS ${${robot_localization_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "robot_localization-msg-extras.cmake")

@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/install
+prefix=/home/leo/UAV/install
 
 Name: base_local_planner
 Description: Description of base_local_planner

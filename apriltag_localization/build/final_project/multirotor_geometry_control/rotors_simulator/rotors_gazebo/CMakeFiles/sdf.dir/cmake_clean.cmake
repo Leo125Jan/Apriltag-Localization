@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/models/iris/iris.sdf"
   "CMakeFiles/sdf"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/models/iris/iris.sdf"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -116,23 +116,23 @@
    (&optional __charge_estimate)
    (if __charge_estimate (setq _charge_estimate __charge_estimate)) _charge_estimate)
   (:timeout
-   (&optional (__timeout :null))
-   (if (not (eq __timeout :null)) (setq _timeout __timeout)) _timeout)
+   (&optional __timeout)
+   (if __timeout (setq _timeout __timeout)) _timeout)
   (:lockout
-   (&optional (__lockout :null))
-   (if (not (eq __lockout :null)) (setq _lockout __lockout)) _lockout)
+   (&optional __lockout)
+   (if __lockout (setq _lockout __lockout)) _lockout)
   (:e_stop
-   (&optional (__e_stop :null))
-   (if (not (eq __e_stop :null)) (setq _e_stop __e_stop)) _e_stop)
+   (&optional __e_stop)
+   (if __e_stop (setq _e_stop __e_stop)) _e_stop)
   (:ros_pause
-   (&optional (__ros_pause :null))
-   (if (not (eq __ros_pause :null)) (setq _ros_pause __ros_pause)) _ros_pause)
+   (&optional __ros_pause)
+   (if __ros_pause (setq _ros_pause __ros_pause)) _ros_pause)
   (:no_battery
-   (&optional (__no_battery :null))
-   (if (not (eq __no_battery :null)) (setq _no_battery __no_battery)) _no_battery)
+   (&optional __no_battery)
+   (if __no_battery (setq _no_battery __no_battery)) _no_battery)
   (:current_limit
-   (&optional (__current_limit :null))
-   (if (not (eq __current_limit :null)) (setq _current_limit __current_limit)) _current_limit)
+   (&optional __current_limit)
+   (if __current_limit (setq _current_limit __current_limit)) _current_limit)
   (:serialization-length
    ()
    (+

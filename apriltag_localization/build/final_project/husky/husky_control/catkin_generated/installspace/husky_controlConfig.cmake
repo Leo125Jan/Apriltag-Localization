@@ -67,14 +67,14 @@ set(husky_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(husky_control_SOURCE_PREFIX /home/leo/UAY/src/final_project/husky/husky_control)
-  set(husky_control_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(husky_control_SOURCE_PREFIX /home/leo/UAV/src/final_project/husky/husky_control)
+  set(husky_control_DEVEL_PREFIX /home/leo/UAV/devel)
   set(husky_control_INSTALL_PREFIX "")
   set(husky_control_PREFIX ${husky_control_DEVEL_PREFIX})
 else()
   set(husky_control_SOURCE_PREFIX "")
   set(husky_control_DEVEL_PREFIX "")
-  set(husky_control_INSTALL_PREFIX /home/leo/UAY/install)
+  set(husky_control_INSTALL_PREFIX /home/leo/UAV/install)
   set(husky_control_PREFIX ${husky_control_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/install/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/install/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(husky_control_LIBRARIES ${husky_control_LIBRARIES})
 
   _list_append_unique(husky_control_LIBRARY_DIRS ${${husky_control_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(husky_control_EXPORTED_TARGETS ${${husky_control_dep}_EXPORTED_TARGETS})
+  list(APPEND husky_control_EXPORTED_TARGETS ${${husky_control_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

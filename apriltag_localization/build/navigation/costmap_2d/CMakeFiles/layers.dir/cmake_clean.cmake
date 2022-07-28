@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/liblayers.pdb"
-  "/home/leo/UAY/devel/lib/liblayers.so"
   "CMakeFiles/layers.dir/plugins/inflation_layer.cpp.o"
   "CMakeFiles/layers.dir/plugins/obstacle_layer.cpp.o"
   "CMakeFiles/layers.dir/plugins/static_layer.cpp.o"
   "CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o"
   "CMakeFiles/layers.dir/src/observation_buffer.cpp.o"
+  "/home/leo/UAV/devel/lib/liblayers.pdb"
+  "/home/leo/UAV/devel/lib/liblayers.so"
 )
 
 # Per-language clean rules from dependency scanning.

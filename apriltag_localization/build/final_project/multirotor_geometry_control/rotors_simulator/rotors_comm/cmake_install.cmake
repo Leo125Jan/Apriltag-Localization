@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm
+# Install script for directory: /home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,59 +39,59 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/srv" TYPE FILE FILES
-    "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/srv/Octomap.srv"
-    "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/srv/RecordRosbag.srv"
+    "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/srv/Octomap.srv"
+    "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/srv/RecordRosbag.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/msg" TYPE FILE FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/msg/WindSpeed.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/msg" TYPE FILE FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/msg/WindSpeed.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/cmake" TYPE FILE FILES "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_comm-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/cmake" TYPE FILE FILES "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_comm-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/leo/UAY/devel/include/rotors_comm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/leo/UAV/devel/include/rotors_comm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/leo/UAY/devel/share/roseus/ros/rotors_comm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/leo/UAV/devel/share/roseus/ros/rotors_comm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/leo/UAY/devel/share/common-lisp/ros/rotors_comm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/leo/UAV/devel/share/common-lisp/ros/rotors_comm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/leo/UAY/devel/share/gennodejs/ros/rotors_comm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/leo/UAV/devel/share/gennodejs/ros/rotors_comm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/leo/UAY/devel/lib/python3/dist-packages/rotors_comm")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/leo/UAV/devel/lib/python2.7/dist-packages/rotors_comm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/leo/UAY/devel/lib/python3/dist-packages/rotors_comm")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/leo/UAV/devel/lib/python2.7/dist-packages/rotors_comm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_comm.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_comm.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/cmake" TYPE FILE FILES "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_comm-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/cmake" TYPE FILE FILES "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_comm-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_commConfig.cmake"
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_commConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_commConfig.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/catkin_generated/installspace/rotors_commConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm" TYPE FILE FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_comm" TYPE FILE FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_comm/package.xml")
 endif()
 

@@ -31,11 +31,23 @@
 #include <mav_msgs/Actuators.h>
 #include <nav_msgs/Odometry.h>
 #include <apriltag_ros/AprilTagDetectionArray.h>
-#include <trajectory_msgs/MultiDOFJointTrajectory.h>
+#include <trajectory_msgs/MultiDOFJointTrajectoryPoint.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Int64.h>
 
 using namespace std;
+
+trajectory_msgs::MultiDOFJointTrajectoryPoint Point;
+float d_x, d_y, d_z;
+
+void PathCallback(const trajectory_msgs::MultiDOFJointTrajectoryPoint::ConstPtr &msg)
+{
+	Point = *msg;
+
+	d_x = Point.transforms[0].translation.x;
+	d_y = Point.transforms[0].translation.y;
+	d_z = Point.transforms[0].translation.z;
+}
 
 int main(int argc, char** argv)
 {
@@ -90,46 +102,33 @@ int main(int argc, char** argv)
 
 	trajectory_pub.publish(trajectory_msg);
 
-	// ros::Publisher Start_det;
+   sleep(5);
 
-	// Start_det = nh.advertise<std_msgs::Int64>("/iris1/start_det", 1000);
+   ROS_INFO("Waiting path message");
 
-	// sleep(5);
+   ros::Subscriber path_sub;
+   path_sub = nh.subscribe("/desired_trajectory", 1000, PathCallback);
 
-	// std_msgs::Int64 Do;
- //    Do.data = 1;
+   // WaitforMessage setting
+	boost::shared_ptr<trajectory_msgs::MultiDOFJointTrajectoryPoint const> sharedEdge;	
+	sharedEdge = ros::topic::waitForMessage<trajectory_msgs::MultiDOFJointTrajectoryPoint>("/desired_trajectory");
 
- //    for(int i = 0; i < 1000; i++)
- //    {
- //    	Start_det.publish(Do);
- //    }
+	if(sharedEdge != NULL)
+	{
+		ROS_INFO("Getting path message");
+		ros::spinOnce();
+	}
 
-    sleep(5);
+	while(ros::ok())
+	{
+		ros::spinOnce();
 
-	// desired_position << 3, 0, 2;
+		desired_position << d_x, d_y, d_z;
 
-	// mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
+		mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
 
-	// trajectory_pub.publish(trajectory_msg);
-
-	// sleep(5);
-
-	// desired_position << 6, 0, 2;
-
-	// mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
-
-	// trajectory_pub.publish(trajectory_msg);
-
-	// for (int i = 0; i < 13; i++)
-	// {
-	// 	sleep(17);
-
-	// 	desired_position << -6 + i, 0, 2;
-
-	// 	mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
-
-	// 	trajectory_pub.publish(trajectory_msg);
-	// }
+		trajectory_pub.publish(trajectory_msg);
+	}
 
 	ros::spinOnce();
 	ros::shutdown();

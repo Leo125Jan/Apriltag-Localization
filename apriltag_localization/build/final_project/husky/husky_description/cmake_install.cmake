@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/husky/husky_description
+# Install script for directory: /home/leo/UAV/src/final_project/husky/husky_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/husky/husky_description/catkin_generated/installspace/husky_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/husky/husky_description/catkin_generated/installspace/husky_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_description/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/husky/husky_description/catkin_generated/installspace/husky_descriptionConfig.cmake"
-    "/home/leo/UAY/build/final_project/husky/husky_description/catkin_generated/installspace/husky_descriptionConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/husky/husky_description/catkin_generated/installspace/husky_descriptionConfig.cmake"
+    "/home/leo/UAV/build/final_project/husky/husky_description/catkin_generated/installspace/husky_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_description" TYPE FILE FILES "/home/leo/UAY/src/final_project/husky/husky_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_description" TYPE FILE FILES "/home/leo/UAV/src/final_project/husky/husky_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_description" TYPE DIRECTORY FILES
-    "/home/leo/UAY/src/final_project/husky/husky_description/launch"
-    "/home/leo/UAY/src/final_project/husky/husky_description/meshes"
-    "/home/leo/UAY/src/final_project/husky/husky_description/urdf"
+    "/home/leo/UAV/src/final_project/husky/husky_description/launch"
+    "/home/leo/UAV/src/final_project/husky/husky_description/meshes"
+    "/home/leo/UAV/src/final_project/husky/husky_description/urdf"
     )
 endif()
 

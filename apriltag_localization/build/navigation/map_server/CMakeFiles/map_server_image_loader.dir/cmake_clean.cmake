@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libmap_server_image_loader.pdb"
-  "/home/leo/UAY/devel/lib/libmap_server_image_loader.so"
   "CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o"
+  "/home/leo/UAV/devel/lib/libmap_server_image_loader.pdb"
+  "/home/leo/UAV/devel/lib/libmap_server_image_loader.so"
 )
 
 # Per-language clean rules from dependency scanning.

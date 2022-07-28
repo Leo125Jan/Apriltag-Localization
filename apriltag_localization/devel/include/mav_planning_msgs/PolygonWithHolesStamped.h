@@ -101,16 +101,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAllocator> >
   : FalseType
   { };
@@ -118,6 +108,16 @@ struct IsFixedSize< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAlloc
 template <class ContainerAllocator>
 struct IsFixedSize< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

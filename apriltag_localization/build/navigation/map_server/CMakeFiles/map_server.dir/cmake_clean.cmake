@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/map_server/map_server"
-  "/home/leo/UAY/devel/lib/map_server/map_server.pdb"
   "CMakeFiles/map_server.dir/src/main.cpp.o"
+  "/home/leo/UAV/devel/lib/map_server/map_server.pdb"
+  "/home/leo/UAV/devel/lib/map_server/map_server"
 )
 
 # Per-language clean rules from dependency scanning.

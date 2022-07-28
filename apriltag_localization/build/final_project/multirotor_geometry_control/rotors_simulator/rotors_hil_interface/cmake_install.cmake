@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface
+# Install script for directory: /home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/catkin_generated/installspace/rotors_hil_interface.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/catkin_generated/installspace/rotors_hil_interface.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_hil_interface/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/catkin_generated/installspace/rotors_hil_interfaceConfig.cmake"
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/catkin_generated/installspace/rotors_hil_interfaceConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/catkin_generated/installspace/rotors_hil_interfaceConfig.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/catkin_generated/installspace/rotors_hil_interfaceConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_hil_interface" TYPE FILE FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_hil_interface" TYPE FILE FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librotors_hil_interface.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/leo/UAY/devel/lib/librotors_hil_interface.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/leo/UAV/devel/lib/librotors_hil_interface.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librotors_hil_interface.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librotors_hil_interface.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librotors_hil_interface.so"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librotors_hil_interface.so")
@@ -73,21 +73,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface/rotors_hil_interface_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface/rotors_hil_interface_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface/rotors_hil_interface_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface" TYPE EXECUTABLE FILES "/home/leo/UAY/devel/lib/rotors_hil_interface/rotors_hil_interface_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface" TYPE EXECUTABLE FILES "/home/leo/UAV/devel/lib/rotors_hil_interface/rotors_hil_interface_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface/rotors_hil_interface_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface/rotors_hil_interface_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface/rotors_hil_interface_node"
-         OLD_RPATH "/home/leo/UAY/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/home/leo/UAV/devel/lib:/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/rotors_hil_interface/rotors_hil_interface_node")

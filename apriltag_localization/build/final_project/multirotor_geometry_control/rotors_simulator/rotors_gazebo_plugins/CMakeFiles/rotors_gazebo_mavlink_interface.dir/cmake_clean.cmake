@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/librotors_gazebo_mavlink_interface.pdb"
-  "/home/leo/UAY/devel/lib/librotors_gazebo_mavlink_interface.so"
   "CMakeFiles/rotors_gazebo_mavlink_interface.dir/src/gazebo_mavlink_interface.cpp.o"
   "CMakeFiles/rotors_gazebo_mavlink_interface.dir/src/geo_mag_declination.cpp.o"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_mavlink_interface.pdb"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_mavlink_interface.so"
 )
 
 # Per-language clean rules from dependency scanning.

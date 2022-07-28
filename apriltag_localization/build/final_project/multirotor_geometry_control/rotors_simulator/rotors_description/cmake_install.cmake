@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description
+# Install script for directory: /home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,29 +38,29 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/catkin_generated/installspace/rotors_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/catkin_generated/installspace/rotors_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/catkin_generated/installspace/rotors_descriptionConfig.cmake"
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/catkin_generated/installspace/rotors_descriptionConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/catkin_generated/installspace/rotors_descriptionConfig.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/catkin_generated/installspace/rotors_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE FILE FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE FILE FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/meshes")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/meshes")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/urdf")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rotors_description" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_description/urdf")
 endif()
 

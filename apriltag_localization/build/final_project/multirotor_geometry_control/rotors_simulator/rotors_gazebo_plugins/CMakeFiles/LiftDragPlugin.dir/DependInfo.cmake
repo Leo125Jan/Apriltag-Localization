@@ -4,25 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/src/liftdrag_plugin/liftdrag_plugin.cpp" "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/CMakeFiles/LiftDragPlugin.dir/src/liftdrag_plugin/liftdrag_plugin.cpp.o"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/src/liftdrag_plugin/liftdrag_plugin.cpp" "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/CMakeFiles/LiftDragPlugin.dir/src/liftdrag_plugin/liftdrag_plugin.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "BOOST_ALL_NO_LIB"
-  "BOOST_ATOMIC_DYN_LINK"
-  "BOOST_DATE_TIME_DYN_LINK"
-  "BOOST_FILESYSTEM_DYN_LINK"
-  "BOOST_IOSTREAMS_DYN_LINK"
-  "BOOST_PROGRAM_OPTIONS_DYN_LINK"
-  "BOOST_REGEX_DYN_LINK"
-  "BOOST_SYSTEM_DYN_LINK"
-  "BOOST_TEST_DYN_LINK"
-  "BOOST_THREAD_DYN_LINK"
-  "LIBBULLET_VERSION=2.88"
+  "LIBBULLET_VERSION=2.87"
   "LIBBULLET_VERSION_GT_282"
-  "LiftDragPlugin_EXPORTS"
   "MAVLINK_INTERFACE=TRUE"
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_ASSERT_ENABLED"
@@ -32,39 +21,38 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/gazebo-11"
+  "/usr/include/gazebo-9"
   "/usr/include/bullet"
-  "/usr/include/sdformat-9.7"
+  "/usr/include/simbody"
+  "/usr/include/sdformat-6.0"
+  "/usr/include/ignition/math4"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
   "/usr/include/OGRE/Paging"
-  "/usr/include/opencv4"
+  "/usr/include/ignition/transport4"
+  "/usr/include/ignition/msgs1"
+  "/usr/include/ignition/common1"
+  "/usr/include/ignition/fuel_tools1"
+  "/usr/include/opencv"
   "final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins"
-  "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/include"
-  "/home/leo/UAY/devel/include"
-  "/home/leo/UAY/src/final_project/mav_comm-3.3.2/mav_msgs/include"
-  "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/include"
-  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/usr/include/gazebo-11/gazebo/msgs"
-  "/opt/ros/noetic/include/mavlink/v2.0"
-  "/usr/include/simbody"
-  "/usr/include/ignition/math6"
-  "/usr/include/ignition/transport8"
-  "/usr/include/ignition/msgs5"
-  "/usr/include/ignition/common3"
-  "/usr/include/ignition/fuel_tools4"
-  "/opt/ros/noetic/include"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/include"
+  "/home/leo/UAV/devel/include"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/mav_comm/mav_msgs/include"
+  "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/include"
+  "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
-  "/usr/include/sdformat-9.7/sdf/.."
-  "/usr/include/ignition/cmake2"
+  "/usr/include/gazebo-9/gazebo/msgs"
+  "/opt/ros/melodic/include/mavlink/v2.0"
   "/usr/include/uuid"
+  "/usr/include/x86_64-linux-gnu"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/CMakeFiles/mav_msgs.dir/DependInfo.cmake"
-  "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/CMakeFiles/lee_position_controller.dir/DependInfo.cmake"
-  "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/DependInfo.cmake"
+  "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo_plugins/CMakeFiles/mav_msgs.dir/DependInfo.cmake"
+  "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/CMakeFiles/lee_position_controller.dir/DependInfo.cmake"
+  "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_control/CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

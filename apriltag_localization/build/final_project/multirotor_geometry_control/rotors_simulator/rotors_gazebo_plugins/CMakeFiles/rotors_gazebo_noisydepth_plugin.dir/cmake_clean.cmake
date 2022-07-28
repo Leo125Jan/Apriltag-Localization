@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/librotors_gazebo_noisydepth_plugin.pdb"
-  "/home/leo/UAY/devel/lib/librotors_gazebo_noisydepth_plugin.so"
-  "CMakeFiles/rotors_gazebo_noisydepth_plugin.dir/src/depth_noise_model.cpp.o"
   "CMakeFiles/rotors_gazebo_noisydepth_plugin.dir/src/gazebo_noisydepth_plugin.cpp.o"
+  "CMakeFiles/rotors_gazebo_noisydepth_plugin.dir/src/depth_noise_model.cpp.o"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_noisydepth_plugin.pdb"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_noisydepth_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

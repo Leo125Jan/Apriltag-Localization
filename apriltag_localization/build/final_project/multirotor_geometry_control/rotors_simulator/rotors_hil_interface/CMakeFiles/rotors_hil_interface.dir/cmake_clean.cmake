@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/librotors_hil_interface.pdb"
-  "/home/leo/UAY/devel/lib/librotors_hil_interface.so"
   "CMakeFiles/rotors_hil_interface.dir/src/hil_sensor_level_interface.cpp.o"
   "CMakeFiles/rotors_hil_interface.dir/src/hil_state_level_interface.cpp.o"
+  "/home/leo/UAV/devel/lib/librotors_hil_interface.pdb"
+  "/home/leo/UAV/devel/lib/librotors_hil_interface.so"
 )
 
 # Per-language clean rules from dependency scanning.

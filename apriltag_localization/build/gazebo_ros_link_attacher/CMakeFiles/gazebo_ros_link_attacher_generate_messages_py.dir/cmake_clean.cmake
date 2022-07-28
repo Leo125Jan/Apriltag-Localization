@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/python3/dist-packages/gazebo_ros_link_attacher/srv/_Attach.py"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/gazebo_ros_link_attacher/srv/__init__.py"
   "CMakeFiles/gazebo_ros_link_attacher_generate_messages_py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/gazebo_ros_link_attacher/srv/_Attach.py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/gazebo_ros_link_attacher/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

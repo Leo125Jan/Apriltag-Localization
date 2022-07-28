@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/python3/dist-packages/husky_msgs/msg/_HuskyStatus.py"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/husky_msgs/msg/__init__.py"
   "CMakeFiles/husky_msgs_generate_messages_py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/husky_msgs/msg/_HuskyStatus.py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/husky_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

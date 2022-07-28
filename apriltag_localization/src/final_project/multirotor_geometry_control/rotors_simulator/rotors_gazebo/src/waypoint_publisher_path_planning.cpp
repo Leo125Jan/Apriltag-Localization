@@ -36,7 +36,7 @@ void Path_Planning(ros::NodeHandle &nh, ros::Publisher &trajectory_pub, const fl
 	ros::Subscriber path_sub;
 
 	// Variable setting
-	ros::Rate loop_rate(10);
+	ros::Rate loop_rate(5);
 	Eigen::Vector3d desired_position;
 	path_sub = nh.subscribe("/path", 1000, PathCallback);
 	trajectory_msgs::MultiDOFJointTrajectory trajectory_msg;
@@ -69,15 +69,15 @@ void Path_Planning(ros::NodeHandle &nh, ros::Publisher &trajectory_pub, const fl
 	{
 		if (loop - i != 0)
 		{
-			x = 1*Point.poses[loop-i].pose.position.x;
+			x = 1*Point.poses[loop-i].pose.position.x - 9;
 			y = 1*Point.poses[loop-i].pose.position.y;
-			z = 10;
+			z = 2;
 		}
 		else
 		{
-			x = 1*Point.poses[loop-i].pose.position.x;
+			x = 1*Point.poses[loop-i].pose.position.x - 9;
 			y = 1*Point.poses[loop-i].pose.position.y;
-			z = 15;
+			z = 2;
 		}
 
 		desired_position << x, y, z;

@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/share/gennodejs/ros/robot_localization/srv/FromLL.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/robot_localization/srv/GetState.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/robot_localization/srv/SetDatum.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/robot_localization/srv/SetPose.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/robot_localization/srv/SetUTMZone.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/robot_localization/srv/ToLL.js"
-  "/home/leo/UAY/devel/share/gennodejs/ros/robot_localization/srv/ToggleFilterProcessing.js"
   "CMakeFiles/robot_localization_generate_messages_nodejs"
+  "/home/leo/UAV/devel/share/gennodejs/ros/robot_localization/srv/FromLL.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/robot_localization/srv/ToLL.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/robot_localization/srv/SetUTMZone.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/robot_localization/srv/SetDatum.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/robot_localization/srv/GetState.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/robot_localization/srv/ToggleFilterProcessing.js"
+  "/home/leo/UAV/devel/share/gennodejs/ros/robot_localization/srv/SetPose.js"
 )
 
 # Per-language clean rules from dependency scanning.

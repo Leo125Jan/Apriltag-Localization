@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/share/roseus/ros/gazebo_ros_link_attacher/manifest.l"
-  "/home/leo/UAY/devel/share/roseus/ros/gazebo_ros_link_attacher/srv/Attach.l"
   "CMakeFiles/gazebo_ros_link_attacher_generate_messages_eus"
+  "/home/leo/UAV/devel/share/roseus/ros/gazebo_ros_link_attacher/srv/Attach.l"
+  "/home/leo/UAV/devel/share/roseus/ros/gazebo_ros_link_attacher/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

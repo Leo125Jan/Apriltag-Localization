@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/costmap_2d/costmap_2d_node"
-  "/home/leo/UAY/devel/lib/costmap_2d/costmap_2d_node.pdb"
   "CMakeFiles/costmap_2d_node.dir/src/costmap_2d_node.cpp.o"
+  "/home/leo/UAV/devel/lib/costmap_2d/costmap_2d_node.pdb"
+  "/home/leo/UAV/devel/lib/costmap_2d/costmap_2d_node"
 )
 
 # Per-language clean rules from dependency scanning.

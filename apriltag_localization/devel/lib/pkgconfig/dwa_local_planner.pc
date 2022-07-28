@@ -1,8 +1,8 @@
-prefix=/home/leo/UAY/devel
+prefix=/home/leo/UAV/devel
 
 Name: dwa_local_planner
 Description: Description of dwa_local_planner
 Version: 1.17.1
-Cflags: -I/home/leo/UAY/devel/include -I/home/leo/UAY/src/navigation/dwa_local_planner/include
+Cflags: -I/home/leo/UAV/devel/include -I/home/leo/UAV/src/navigation/dwa_local_planner/include
 Libs: -L${prefix}/lib -ldwa_local_planner
 Requires: base_local_planner dynamic_reconfigure nav_msgs pluginlib sensor_msgs roscpp tf2 tf2_ros

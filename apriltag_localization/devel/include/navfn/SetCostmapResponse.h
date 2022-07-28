@@ -71,22 +71,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::navfn::SetCostmapResponse_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::navfn::SetCostmapResponse_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::navfn::SetCostmapResponse_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::navfn::SetCostmapResponse_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::navfn::SetCostmapResponse_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::navfn::SetCostmapResponse_<ContainerAllocator> const>
   : TrueType
   { };
 

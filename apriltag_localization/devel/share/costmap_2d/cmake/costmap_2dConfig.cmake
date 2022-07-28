@@ -67,14 +67,14 @@ set(costmap_2d_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(costmap_2d_SOURCE_PREFIX /home/leo/UAY/src/navigation/costmap_2d)
-  set(costmap_2d_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(costmap_2d_SOURCE_PREFIX /home/leo/UAV/src/navigation/costmap_2d)
+  set(costmap_2d_DEVEL_PREFIX /home/leo/UAV/devel)
   set(costmap_2d_INSTALL_PREFIX "")
   set(costmap_2d_PREFIX ${costmap_2d_DEVEL_PREFIX})
 else()
   set(costmap_2d_SOURCE_PREFIX "")
   set(costmap_2d_DEVEL_PREFIX "")
-  set(costmap_2d_INSTALL_PREFIX /home/leo/UAY/install)
+  set(costmap_2d_INSTALL_PREFIX /home/leo/UAV/install)
   set(costmap_2d_PREFIX ${costmap_2d_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(costmap_2d_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/leo/UAY/devel/include;/home/leo/UAY/src/navigation/costmap_2d/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
+if(NOT "/home/leo/UAV/devel/include;/home/leo/UAV/src/navigation/costmap_2d/include;/usr/include/eigen3;/usr/include " STREQUAL " ")
   set(costmap_2d_INCLUDE_DIRS "")
-  set(_include_dirs "/home/leo/UAY/devel/include;/home/leo/UAY/src/navigation/costmap_2d/include;/usr/include/eigen3;/usr/include")
+  set(_include_dirs "/home/leo/UAV/devel/include;/home/leo/UAV/src/navigation/costmap_2d/include;/usr/include/eigen3;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/costmap_2d " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/leo/UAY/devel/include;/home/leo/UAY/src/navigation/costmap_2d/incl
         message(FATAL_ERROR "Project 'costmap_2d' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'costmap_2d' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAY/src/navigation/costmap_2d/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'costmap_2d' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAV/src/navigation/costmap_2d/${idir}'.  ${_report}")
     endif()
     _list_append_unique(costmap_2d_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "costmap_2d;layers;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0")
+set(libraries "costmap_2d;layers;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libpthread.so")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/devel/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/devel/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(costmap_2d_LIBRARIES ${costmap_2d_LIBRARIES})
 
   _list_append_unique(costmap_2d_LIBRARY_DIRS ${${costmap_2d_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(costmap_2d_EXPORTED_TARGETS ${${costmap_2d_dep}_EXPORTED_TARGETS})
+  list(APPEND costmap_2d_EXPORTED_TARGETS ${${costmap_2d_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "costmap_2d-msg-extras.cmake")

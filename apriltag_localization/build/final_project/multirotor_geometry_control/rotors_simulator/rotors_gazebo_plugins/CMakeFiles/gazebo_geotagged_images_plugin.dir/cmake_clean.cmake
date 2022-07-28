@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libgazebo_geotagged_images_plugin.pdb"
-  "/home/leo/UAY/devel/lib/libgazebo_geotagged_images_plugin.so"
   "CMakeFiles/gazebo_geotagged_images_plugin.dir/src/external/gazebo_geotagged_images_plugin.cpp.o"
+  "/home/leo/UAV/devel/lib/libgazebo_geotagged_images_plugin.pdb"
+  "/home/leo/UAV/devel/lib/libgazebo_geotagged_images_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

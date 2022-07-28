@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/rotors_gazebo/Error_C_OOP"
-  "/home/leo/UAY/devel/lib/rotors_gazebo/Error_C_OOP.pdb"
   "CMakeFiles/Error_C_OOP.dir/src/Error_C_OOP.cpp.o"
+  "/home/leo/UAV/devel/lib/rotors_gazebo/Error_C_OOP.pdb"
+  "/home/leo/UAV/devel/lib/rotors_gazebo/Error_C_OOP"
 )
 
 # Per-language clean rules from dependency scanning.

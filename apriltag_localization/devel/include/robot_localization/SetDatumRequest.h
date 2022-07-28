@@ -88,22 +88,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::robot_localization::SetDatumRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::robot_localization::SetDatumRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::robot_localization::SetDatumRequest_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::robot_localization::SetDatumRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::robot_localization::SetDatumRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::robot_localization::SetDatumRequest_<ContainerAllocator> const>
   : TrueType
   { };
 

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "mavros_msgs;rospy;rqt_gui;rqt_gui_py".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "rqt_rotors"
-PROJECT_SPACE_DIR = "/home/leo/UAY/devel"
+PROJECT_SPACE_DIR = "/home/leo/UAV/devel"
 PROJECT_VERSION = "2.2.3"

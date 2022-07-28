@@ -67,14 +67,14 @@ set(rotors_hil_interface_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rotors_hil_interface_SOURCE_PREFIX /home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface)
-  set(rotors_hil_interface_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(rotors_hil_interface_SOURCE_PREFIX /home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface)
+  set(rotors_hil_interface_DEVEL_PREFIX /home/leo/UAV/devel)
   set(rotors_hil_interface_INSTALL_PREFIX "")
   set(rotors_hil_interface_PREFIX ${rotors_hil_interface_DEVEL_PREFIX})
 else()
   set(rotors_hil_interface_SOURCE_PREFIX "")
   set(rotors_hil_interface_DEVEL_PREFIX "")
-  set(rotors_hil_interface_INSTALL_PREFIX /home/leo/UAY/install)
+  set(rotors_hil_interface_INSTALL_PREFIX /home/leo/UAV/install)
   set(rotors_hil_interface_PREFIX ${rotors_hil_interface_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rotors_hil_interface_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/include " STREQUAL " ")
+if(NOT "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/include " STREQUAL " ")
   set(rotors_hil_interface_INCLUDE_DIRS "")
-  set(_include_dirs "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/include")
+  set(_include_dirs "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/include")
   if(NOT "https://github.com/ethz-asl/rotors_simulator/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/ethz-asl/rotors_simulator/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "https://github.com/ethz-asl/rotors_simulator " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simul
         message(FATAL_ERROR "Project 'rotors_hil_interface' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rotors_hil_interface' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rotors_hil_interface' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_hil_interface/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rotors_hil_interface_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/devel/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/devel/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(rotors_hil_interface_LIBRARIES ${rotors_hil_interface_LIBRARIES})
 
   _list_append_unique(rotors_hil_interface_LIBRARY_DIRS ${${rotors_hil_interface_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(rotors_hil_interface_EXPORTED_TARGETS ${${rotors_hil_interface_dep}_EXPORTED_TARGETS})
+  list(APPEND rotors_hil_interface_EXPORTED_TARGETS ${${rotors_hil_interface_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

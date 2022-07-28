@@ -182,11 +182,11 @@ class Status {
   static getMessageSize(object) {
     let length = 0;
     length += std_msgs.msg.Header.getMessageSize(object.header);
-    length += _getByteLength(object.vehicle_name);
-    length += _getByteLength(object.vehicle_type);
-    length += _getByteLength(object.rc_command_mode);
-    length += _getByteLength(object.motor_status);
-    length += _getByteLength(object.gps_status);
+    length += object.vehicle_name.length;
+    length += object.vehicle_type.length;
+    length += object.rc_command_mode.length;
+    length += object.motor_status.length;
+    length += object.gps_status.length;
     return length + 42;
   }
 

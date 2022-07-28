@@ -41,11 +41,6 @@
 (intern "*GPS_STATUS_NO_LOCK*" (find-package "MAV_MSGS::STATUS"))
 (shadow '*GPS_STATUS_NO_LOCK* (find-package "MAV_MSGS::STATUS"))
 (defconstant mav_msgs::Status::*GPS_STATUS_NO_LOCK* "\"no_lock\"")
-
-(defun mav_msgs::Status-to-symbol (const)
-  (cond
-        (t nil)))
-
 (defclass mav_msgs::Status
   :super ros::object
   :slots (_header _vehicle_name _vehicle_type _battery_voltage _rc_command_mode _command_interface_enabled _flight_time _system_uptime _cpu_load _motor_status _in_air _gps_status _gps_num_satellites ))
@@ -102,8 +97,8 @@
    (&optional __rc_command_mode)
    (if __rc_command_mode (setq _rc_command_mode __rc_command_mode)) _rc_command_mode)
   (:command_interface_enabled
-   (&optional (__command_interface_enabled :null))
-   (if (not (eq __command_interface_enabled :null)) (setq _command_interface_enabled __command_interface_enabled)) _command_interface_enabled)
+   (&optional __command_interface_enabled)
+   (if __command_interface_enabled (setq _command_interface_enabled __command_interface_enabled)) _command_interface_enabled)
   (:flight_time
    (&optional __flight_time)
    (if __flight_time (setq _flight_time __flight_time)) _flight_time)
@@ -117,8 +112,8 @@
    (&optional __motor_status)
    (if __motor_status (setq _motor_status __motor_status)) _motor_status)
   (:in_air
-   (&optional (__in_air :null))
-   (if (not (eq __in_air :null)) (setq _in_air __in_air)) _in_air)
+   (&optional __in_air)
+   (if __in_air (setq _in_air __in_air)) _in_air)
   (:gps_status
    (&optional __gps_status)
    (if __gps_status (setq _gps_status __gps_status)) _gps_status)

@@ -102,16 +102,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::mav_msgs::RateThrust_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::mav_msgs::RateThrust_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::mav_msgs::RateThrust_<ContainerAllocator> >
   : FalseType
   { };
@@ -119,6 +109,16 @@ struct IsFixedSize< ::mav_msgs::RateThrust_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::mav_msgs::RateThrust_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_msgs::RateThrust_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::mav_msgs::RateThrust_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/leo/UAY/src/navigation/fake_localization/fake_localization.cpp" "/home/leo/UAY/build/navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.o"
+  "/home/leo/UAV/src/navigation/fake_localization/fake_localization.cpp" "/home/leo/UAV/build/navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/opt/ros/noetic/include"
-  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
   "/usr/include/eigen3"
   )
 

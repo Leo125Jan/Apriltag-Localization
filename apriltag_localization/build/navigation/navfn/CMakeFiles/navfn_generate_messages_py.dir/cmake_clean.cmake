@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/python3/dist-packages/navfn/srv/_MakeNavPlan.py"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/navfn/srv/_SetCostmap.py"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/navfn/srv/__init__.py"
   "CMakeFiles/navfn_generate_messages_py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

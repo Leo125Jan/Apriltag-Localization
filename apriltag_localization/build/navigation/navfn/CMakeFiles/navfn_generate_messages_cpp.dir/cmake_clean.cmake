@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/include/navfn/MakeNavPlan.h"
-  "/home/leo/UAY/devel/include/navfn/SetCostmap.h"
   "CMakeFiles/navfn_generate_messages_cpp"
+  "/home/leo/UAV/devel/include/navfn/MakeNavPlan.h"
+  "/home/leo/UAV/devel/include/navfn/SetCostmap.h"
 )
 
 # Per-language clean rules from dependency scanning.

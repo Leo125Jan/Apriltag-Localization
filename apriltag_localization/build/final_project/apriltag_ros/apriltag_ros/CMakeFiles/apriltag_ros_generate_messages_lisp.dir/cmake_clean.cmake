@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/share/common-lisp/ros/apriltag_ros/msg/AprilTagDetection.lisp"
-  "/home/leo/UAY/devel/share/common-lisp/ros/apriltag_ros/msg/AprilTagDetectionArray.lisp"
-  "/home/leo/UAY/devel/share/common-lisp/ros/apriltag_ros/srv/AnalyzeSingleImage.lisp"
   "CMakeFiles/apriltag_ros_generate_messages_lisp"
+  "/home/leo/UAV/devel/share/common-lisp/ros/apriltag_ros/msg/AprilTagDetectionArray.lisp"
+  "/home/leo/UAV/devel/share/common-lisp/ros/apriltag_ros/msg/AprilTagDetection.lisp"
+  "/home/leo/UAV/devel/share/common-lisp/ros/apriltag_ros/srv/AnalyzeSingleImage.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

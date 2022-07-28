@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/python3/dist-packages/costmap_2d/msg/_VoxelGrid.py"
-  "/home/leo/UAY/devel/lib/python3/dist-packages/costmap_2d/msg/__init__.py"
   "CMakeFiles/costmap_2d_generate_messages_py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py"
+  "/home/leo/UAV/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

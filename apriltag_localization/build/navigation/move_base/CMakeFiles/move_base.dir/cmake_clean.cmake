@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libmove_base.pdb"
-  "/home/leo/UAY/devel/lib/libmove_base.so"
   "CMakeFiles/move_base.dir/src/move_base.cpp.o"
+  "/home/leo/UAV/devel/lib/libmove_base.pdb"
+  "/home/leo/UAV/devel/lib/libmove_base.so"
 )
 
 # Per-language clean rules from dependency scanning.

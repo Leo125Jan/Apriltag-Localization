@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/leo/UAY/build'
+export PWD='/home/leo/UAV/build'

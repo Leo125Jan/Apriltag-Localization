@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 # This is needed such that int / int gives a float instead of an int
 from __future__ import division
 

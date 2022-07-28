@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/multirotor_geometry_control/path_planner
+# Install script for directory: /home/leo/UAV/src/final_project/multirotor_geometry_control/path_planner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/multirotor_geometry_control/path_planner/catkin_generated/installspace/hybrid_astar.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/multirotor_geometry_control/path_planner/catkin_generated/installspace/hybrid_astar.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hybrid_astar/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/path_planner/catkin_generated/installspace/hybrid_astarConfig.cmake"
-    "/home/leo/UAY/build/final_project/multirotor_geometry_control/path_planner/catkin_generated/installspace/hybrid_astarConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/path_planner/catkin_generated/installspace/hybrid_astarConfig.cmake"
+    "/home/leo/UAV/build/final_project/multirotor_geometry_control/path_planner/catkin_generated/installspace/hybrid_astarConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hybrid_astar" TYPE FILE FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/path_planner/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hybrid_astar" TYPE FILE FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/path_planner/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/hybrid_astar"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar" TYPE EXECUTABLE FILES "/home/leo/UAY/devel/lib/hybrid_astar/hybrid_astar")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar" TYPE EXECUTABLE FILES "/home/leo/UAV/devel/lib/hybrid_astar/hybrid_astar")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/hybrid_astar" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/hybrid_astar")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/hybrid_astar"
-         OLD_RPATH "/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/hybrid_astar")
@@ -79,12 +79,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/tf_broadcaster"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar" TYPE EXECUTABLE FILES "/home/leo/UAY/devel/lib/hybrid_astar/tf_broadcaster")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar" TYPE EXECUTABLE FILES "/home/leo/UAV/devel/lib/hybrid_astar/tf_broadcaster")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/tf_broadcaster" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/tf_broadcaster")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/tf_broadcaster"
-         OLD_RPATH "/opt/ros/noetic/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/hybrid_astar/tf_broadcaster")
@@ -93,6 +93,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hybrid_astar/launch" TYPE DIRECTORY FILES "/home/leo/UAY/src/final_project/multirotor_geometry_control/path_planner/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hybrid_astar/launch" TYPE DIRECTORY FILES "/home/leo/UAV/src/final_project/multirotor_geometry_control/path_planner/launch/")
 endif()
 

@@ -19,7 +19,7 @@
 (defmethod mav_planning_msgs::Polygon2D
   (:init
    (&key
-    ((:points __points) ())
+    ((:points __points) (let (r) (dotimes (i 0) (push (instance mav_planning_msgs::Point2D :init) r)) r))
     )
    (send-super :init)
    (setq _points __points)

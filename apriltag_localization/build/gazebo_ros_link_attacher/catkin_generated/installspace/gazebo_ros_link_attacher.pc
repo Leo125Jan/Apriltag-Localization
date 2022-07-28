@@ -1,4 +1,4 @@
-prefix=/home/leo/UAY/install
+prefix=/home/leo/UAV/install
 
 Name: gazebo_ros_link_attacher
 Description: Description of gazebo_ros_link_attacher

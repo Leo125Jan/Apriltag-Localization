@@ -1,8 +1,8 @@
-# Install script for directory: /home/leo/UAY/src/final_project/husky/husky_viz
+# Install script for directory: /home/leo/UAV/src/final_project/husky/husky_viz
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leo/UAY/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leo/UAV/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAY/build/final_project/husky/husky_viz/catkin_generated/installspace/husky_viz.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leo/UAV/build/final_project/husky/husky_viz/catkin_generated/installspace/husky_viz.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_viz/cmake" TYPE FILE FILES
-    "/home/leo/UAY/build/final_project/husky/husky_viz/catkin_generated/installspace/husky_vizConfig.cmake"
-    "/home/leo/UAY/build/final_project/husky/husky_viz/catkin_generated/installspace/husky_vizConfig-version.cmake"
+    "/home/leo/UAV/build/final_project/husky/husky_viz/catkin_generated/installspace/husky_vizConfig.cmake"
+    "/home/leo/UAV/build/final_project/husky/husky_viz/catkin_generated/installspace/husky_vizConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_viz" TYPE FILE FILES "/home/leo/UAY/src/final_project/husky/husky_viz/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_viz" TYPE FILE FILES "/home/leo/UAV/src/final_project/husky/husky_viz/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/husky_viz" TYPE DIRECTORY FILES
-    "/home/leo/UAY/src/final_project/husky/husky_viz/launch"
-    "/home/leo/UAY/src/final_project/husky/husky_viz/rviz"
-    "/home/leo/UAY/src/final_project/husky/husky_viz/rqt"
+    "/home/leo/UAV/src/final_project/husky/husky_viz/launch"
+    "/home/leo/UAV/src/final_project/husky/husky_viz/rviz"
+    "/home/leo/UAV/src/final_project/husky/husky_viz/rqt"
     )
 endif()
 

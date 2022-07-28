@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/libclear_costmap_recovery.pdb"
-  "/home/leo/UAY/devel/lib/libclear_costmap_recovery.so"
   "CMakeFiles/clear_costmap_recovery.dir/src/clear_costmap_recovery.cpp.o"
+  "/home/leo/UAV/devel/lib/libclear_costmap_recovery.pdb"
+  "/home/leo/UAV/devel/lib/libclear_costmap_recovery.so"
 )
 
 # Per-language clean rules from dependency scanning.

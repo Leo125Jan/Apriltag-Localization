@@ -97,7 +97,7 @@ class OctomapRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.filename);
+    length += object.filename.length;
     return length + 61;
   }
 

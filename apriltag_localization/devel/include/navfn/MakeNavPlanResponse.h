@@ -100,16 +100,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsMessage< ::navfn::MakeNavPlanResponse_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsMessage< ::navfn::MakeNavPlanResponse_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsFixedSize< ::navfn::MakeNavPlanResponse_<ContainerAllocator> >
   : FalseType
   { };
@@ -117,6 +107,16 @@ struct IsFixedSize< ::navfn::MakeNavPlanResponse_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::navfn::MakeNavPlanResponse_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::navfn::MakeNavPlanResponse_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::navfn::MakeNavPlanResponse_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>

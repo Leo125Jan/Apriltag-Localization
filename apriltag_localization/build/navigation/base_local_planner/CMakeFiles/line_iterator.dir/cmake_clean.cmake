@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/base_local_planner/line_iterator"
-  "/home/leo/UAY/devel/lib/base_local_planner/line_iterator.pdb"
   "CMakeFiles/line_iterator.dir/test/line_iterator_test.cpp.o"
+  "/home/leo/UAV/devel/lib/base_local_planner/line_iterator.pdb"
+  "/home/leo/UAV/devel/lib/base_local_planner/line_iterator"
 )
 
 # Per-language clean rules from dependency scanning.

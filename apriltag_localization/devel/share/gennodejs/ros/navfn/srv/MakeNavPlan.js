@@ -220,7 +220,7 @@ class MakeNavPlanResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.error_message);
+    length += object.error_message.length;
     object.path.forEach((val) => {
       length += geometry_msgs.msg.PoseStamped.getMessageSize(val);
     });

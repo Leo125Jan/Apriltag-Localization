@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/leo/UAY/src/navigation/navfn
-# Build directory: /home/leo/UAY/build/navigation/navfn
+# Source directory: /home/leo/UAV/src/navigation/navfn
+# Build directory: /home/leo/UAV/build/navigation/navfn
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

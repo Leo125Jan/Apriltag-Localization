@@ -60,8 +60,8 @@
    (&optional __leaf_size)
    (if __leaf_size (setq _leaf_size __leaf_size)) _leaf_size)
   (:publish_octomap
-   (&optional (__publish_octomap :null))
-   (if (not (eq __publish_octomap :null)) (setq _publish_octomap __publish_octomap)) _publish_octomap)
+   (&optional __publish_octomap)
+   (if __publish_octomap (setq _publish_octomap __publish_octomap)) _publish_octomap)
   (:filename
    (&optional __filename)
    (if __filename (setq _filename __filename)) _filename)

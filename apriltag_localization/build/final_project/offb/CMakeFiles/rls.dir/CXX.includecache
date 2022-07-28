@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leo/UAV/src/final_project/offb/include/rls.cpp
+rls.h
+/home/leo/UAV/src/final_project/offb/include/rls.h
+
+/home/leo/UAV/src/final_project/offb/include/rls.h
+stdio.h
+-
+iostream
+-
+vector
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Dense
+-
+

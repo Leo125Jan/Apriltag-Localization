@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/librotors_gazebo_wind_plugin.pdb"
-  "/home/leo/UAY/devel/lib/librotors_gazebo_wind_plugin.so"
   "CMakeFiles/rotors_gazebo_wind_plugin.dir/src/gazebo_wind_plugin.cpp.o"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_wind_plugin.pdb"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_wind_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

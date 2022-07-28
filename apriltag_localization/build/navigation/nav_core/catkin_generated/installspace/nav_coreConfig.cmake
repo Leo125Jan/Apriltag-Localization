@@ -67,14 +67,14 @@ set(nav_core_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(nav_core_SOURCE_PREFIX /home/leo/UAY/src/navigation/nav_core)
-  set(nav_core_DEVEL_PREFIX /home/leo/UAY/devel)
+  set(nav_core_SOURCE_PREFIX /home/leo/UAV/src/navigation/nav_core)
+  set(nav_core_DEVEL_PREFIX /home/leo/UAV/devel)
   set(nav_core_INSTALL_PREFIX "")
   set(nav_core_PREFIX ${nav_core_DEVEL_PREFIX})
 else()
   set(nav_core_SOURCE_PREFIX "")
   set(nav_core_DEVEL_PREFIX "")
-  set(nav_core_INSTALL_PREFIX /home/leo/UAY/install)
+  set(nav_core_INSTALL_PREFIX /home/leo/UAV/install)
   set(nav_core_PREFIX ${nav_core_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/leo/UAY/install/lib;/home/leo/UAY/devel/lib;/home/leo/UAV/devel/lib;/home/leo/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/leo/UAV/install/lib;/home/leo/UAV/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(nav_core_LIBRARIES ${nav_core_LIBRARIES})
 
   _list_append_unique(nav_core_LIBRARY_DIRS ${${nav_core_dep}_LIBRARY_DIRS})
-  _list_append_deduplicate(nav_core_EXPORTED_TARGETS ${${nav_core_dep}_EXPORTED_TARGETS})
+  list(APPEND nav_core_EXPORTED_TARGETS ${${nav_core_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

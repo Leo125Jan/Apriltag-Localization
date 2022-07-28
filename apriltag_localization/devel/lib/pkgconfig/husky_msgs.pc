@@ -1,8 +1,8 @@
-prefix=/home/leo/UAY/devel
+prefix=/home/leo/UAV/devel
 
 Name: husky_msgs
 Description: Description of husky_msgs
 Version: 0.6.2
-Cflags: -I/home/leo/UAY/devel/include
+Cflags: -I/home/leo/UAV/devel/include
 Libs: -L${prefix}/lib 
 Requires: std_msgs message_runtime

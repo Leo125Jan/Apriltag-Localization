@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/librotors_gazebo_lidar_plugin.pdb"
-  "/home/leo/UAY/devel/lib/librotors_gazebo_lidar_plugin.so"
   "CMakeFiles/rotors_gazebo_lidar_plugin.dir/src/external/gazebo_lidar_plugin.cpp.o"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_lidar_plugin.pdb"
+  "/home/leo/UAV/devel/lib/librotors_gazebo_lidar_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

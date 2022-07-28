@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_evaluation"
+echo_and_run cd "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_evaluation"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/leo/UAY/install/lib/python3/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/leo/UAV/install/lib/python2.7/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/leo/UAY/install/lib/python3/dist-packages:/home/leo/UAY/build/lib/python3/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/leo/UAY/build" \
-    "/usr/bin/python3" \
-    "/home/leo/UAY/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_evaluation/setup.py" \
+    PYTHONPATH="/home/leo/UAV/install/lib/python2.7/dist-packages:/home/leo/UAV/build/lib/python2.7/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/leo/UAV/build" \
+    "/usr/bin/python2" \
+    "/home/leo/UAV/src/final_project/multirotor_geometry_control/rotors_simulator/rotors_evaluation/setup.py" \
      \
-    build --build-base "/home/leo/UAY/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_evaluation" \
+    build --build-base "/home/leo/UAV/build/final_project/multirotor_geometry_control/rotors_simulator/rotors_evaluation" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/leo/UAY/install" --install-scripts="/home/leo/UAY/install/bin"
+    --install-layout=deb --prefix="/home/leo/UAV/install" --install-scripts="/home/leo/UAV/install/bin"

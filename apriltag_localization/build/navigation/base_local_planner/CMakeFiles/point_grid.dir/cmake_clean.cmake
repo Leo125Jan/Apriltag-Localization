@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/leo/UAY/devel/lib/base_local_planner/point_grid"
-  "/home/leo/UAY/devel/lib/base_local_planner/point_grid.pdb"
   "CMakeFiles/point_grid.dir/src/point_grid_node.cpp.o"
+  "/home/leo/UAV/devel/lib/base_local_planner/point_grid.pdb"
+  "/home/leo/UAV/devel/lib/base_local_planner/point_grid"
 )
 
 # Per-language clean rules from dependency scanning.

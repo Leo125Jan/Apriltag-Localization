@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/leo/UAY/src/navigation/carrot_planner/include".split(';') if "/home/leo/UAY/src/navigation/carrot_planner/include" != "" else []
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/leo/UAV/src/navigation/carrot_planner/include".split(';') if "/home/leo/UAV/src/navigation/carrot_planner/include" != "" else []
 PROJECT_CATKIN_DEPENDS = "angles;base_local_planner;costmap_2d;nav_core;pluginlib;roscpp;tf2;tf2_ros".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lcarrot_planner".split(';') if "-lcarrot_planner" != "" else []
 PROJECT_NAME = "carrot_planner"
-PROJECT_SPACE_DIR = "/home/leo/UAY/devel"
+PROJECT_SPACE_DIR = "/home/leo/UAV/devel"
 PROJECT_VERSION = "1.17.1"
