@@ -146,7 +146,7 @@ void LeePositionController::ComputeDesiredMoment(const Eigen::Vector3d& force_co
 		yaw+=6.28;
 	}
 
-	/*double yaw = command_trajectory_.getYaw();*/
+	// double yaw = command_trajectory_.getYaw();
 	b1_des << cos(yaw), sin(yaw), 0;
 
 	// b_3_d is calculated in ComputeDesiredForce()

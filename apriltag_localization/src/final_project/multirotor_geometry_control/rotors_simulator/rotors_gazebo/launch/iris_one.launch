@@ -11,7 +11,7 @@
     <env name="GAZEBO_RESOURCE_PATH" value="${GAZEBO_RESOURCE_PATH}:$(find rotors_gazebo)/models"/>
 
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find rotors_gazebo)/worlds/test_square.world"/>
+        <arg name="world_name" value="$(find rotors_gazebo)/worlds/test_room_square.world"/>
         <arg name="paused" value="false"/>
     </include>
 
@@ -23,8 +23,8 @@
             <arg name="enable_logging" value="$(arg enable_logging)" />
             <arg name="enable_ground_truth" value="$(arg enable_ground_truth)" />
             <arg name="log_file" value="$(arg mav_name)1"/>
-            <arg name="y" value="-0.5"/>
-            <arg name="x" value="-7"/>
+            <arg name="y" value="+2.0"/>
+            <arg name="x" value="-2.0"/>
         </include>
     </group>
 

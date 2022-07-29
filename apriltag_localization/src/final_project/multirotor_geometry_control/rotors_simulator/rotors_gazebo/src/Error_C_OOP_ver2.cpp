@@ -170,7 +170,11 @@ void CameraCalibration::cameraCallback(const apriltag_ros::AprilTagDetectionArra
 		    k = tag.detections[0].pose.pose.pose.orientation.z;
 		    w = tag.detections[0].pose.pose.pose.orientation.w;
 
-	    	Print_error(y, x, z);
+		    q = Quaterion_calcutaion(i, j, k, w, x, y, z);
+
+			Print_error(-q.x(), -q.y(), -q.z());
+
+	    	// Print_error(y, x, z);
 	    }
 		else if(type == "forward")
 		{
@@ -228,10 +232,16 @@ void CameraCalibration::Print_error(float x, float y, float z)
 	}
 	else if(type == "forward")
 	{
-
-		cal_x = tag_x - (z + 0.05) - 0.1;
-		cal_y = tag_y + y;
-		cal_z = tag_z + x;
+		// if (tag_x > 0)
+		// {
+		// 	cal_x = tag_x - (z + 0.05) - 0.1;
+		// }
+		// else if (tag_x < 0)
+		// {
+		// 	cal_x = tag_x + (z + 0.05) - 0.1;
+		// }
+		// cal_y = tag_y + y;
+		// cal_z = tag_z + x;
 	}
 
 	// cout << "calbration_" << type << "_x: "<< cal_x 
@@ -360,36 +370,69 @@ void CameraCalibration::setTagPos(vector<int> id)
 				// 	break;
 			// }
 
-			tag_x = -6;
-			tag_y = -0.5;
+			tag_x = -2.0;
+			tag_y = +2.0;
 		}	
 		if(type == "forward")
 		{
 			switch (id[0])
 			{
-				case 1:
+				case 15:
 
-					tag_x = 2.0;
-					tag_y = -0.5;
-					tag_z = 2;
+					tag_x = +6.0;
+					tag_y = +2.0;
+					tag_z = +2.0;
+
+					cal_x = tag_x - (z + 0.05) - 0.1;
+					cal_y = tag_y + y;
+					cal_z = tag_z + x;
 
 					break;
 
-				case 3:
+				case 55:
 
-					tag_x = 2.0;
-					tag_y = -6;
-					tag_z = 2;
+					tag_x = +2.0;
+					tag_y = -6.0;
+					tag_z = +2.0;
+
+					cal_x = tag_x + y;
+					cal_y = tag_y + (z + 0.05) - 0.1;
+					cal_z = tag_z + x;
+
+					break;
+
+				case 45:
+
+					tag_x = -6.0;
+					tag_y = -2.0;
+					tag_z = +2.0;
+
+					cal_x = tag_x + (z + 0.05) - 0.1;
+					cal_y = tag_y + y;
+					cal_z = tag_z + x;
+
+					break;
+
+				case 35:
+
+					tag_x = -2.0;
+					tag_y = +6.0;
+					tag_z = +2.0;
+
+					cal_x = tag_x + y;
+					cal_y = tag_y - (z + 0.05) - 0.1;
+					cal_z = tag_z + x;
 
 					break;
 
 				default:
 
-					tag_x = -7;
-					tag_y = 0;
+					tag_x = 0.0;
+					tag_y = 0.0;
+					tag_z = 2.0;
 
 					break;
-			}	
+			}
 		}	
 	}
 }

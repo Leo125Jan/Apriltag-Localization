@@ -168,7 +168,7 @@ pose1_config: [true,  true,  true,
                false, false, false]
 pose1_differential: true
 pose1_relative: false
-pose1_queue_size: 5
+pose1_queue_size: 10
 pose1_nodelay: false
 
 # twist0: example/twist
@@ -181,7 +181,7 @@ pose1_nodelay: false
 # twist0_rejection_threshold: 2
 # twist0_nodelay: false
 
-imu0: /iris1/imu/enu
+imu0: /iris1/imu
 imu0_config: [false, false, false,
               true,  true,  true,
               false, false, false,
@@ -190,7 +190,7 @@ imu0_config: [false, false, false,
 imu0_nodelay: false
 imu0_differential: false
 imu0_relative: true
-imu0_queue_size: 20
+imu0_queue_size: 10
 imu0_pose_rejection_threshold: 0.8                 # Note the difference in parameter names
 imu0_twist_rejection_threshold: 0.8                #
 imu0_linear_acceleration_rejection_threshold: 0.8  #

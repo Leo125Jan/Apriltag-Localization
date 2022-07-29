@@ -239,6 +239,8 @@ std_msgs/String.h
 -
 std_msgs/Int64.h
 -
+mav_msgs/RollPitchYawrateThrust.h
+-
 
 /opt/ros/melodic/include/geometry_msgs/Point.h
 string

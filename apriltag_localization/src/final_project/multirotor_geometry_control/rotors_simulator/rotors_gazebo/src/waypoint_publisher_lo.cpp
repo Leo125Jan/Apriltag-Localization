@@ -34,11 +34,12 @@
 #include <trajectory_msgs/MultiDOFJointTrajectoryPoint.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Int64.h>
+#include <mav_msgs/RollPitchYawrateThrust.h>
 
 using namespace std;
 
 trajectory_msgs::MultiDOFJointTrajectoryPoint Point;
-float d_x, d_y, d_z;
+float d_x, d_y, d_z, v_x, v_y, v_z;
 
 void PathCallback(const trajectory_msgs::MultiDOFJointTrajectoryPoint::ConstPtr &msg)
 {
@@ -47,6 +48,9 @@ void PathCallback(const trajectory_msgs::MultiDOFJointTrajectoryPoint::ConstPtr 
 	d_x = Point.transforms[0].translation.x;
 	d_y = Point.transforms[0].translation.y;
 	d_z = Point.transforms[0].translation.z;
+	v_x = Point.velocities[0].linear.x;
+	v_y = Point.velocities[0].linear.y;
+	v_z = Point.velocities[0].linear.z;
 }
 
 int main(int argc, char** argv)
@@ -102,12 +106,12 @@ int main(int argc, char** argv)
 
 	trajectory_pub.publish(trajectory_msg);
 
-   sleep(5);
+	sleep(5);
 
-   ROS_INFO("Waiting path message");
+	ROS_INFO("Waiting path message");
 
-   ros::Subscriber path_sub;
-   path_sub = nh.subscribe("/desired_trajectory", 1000, PathCallback);
+	ros::Subscriber path_sub;
+	path_sub = nh.subscribe("/desired_trajectory", 1000, PathCallback);
 
    // WaitforMessage setting
 	boost::shared_ptr<trajectory_msgs::MultiDOFJointTrajectoryPoint const> sharedEdge;	
@@ -126,6 +130,10 @@ int main(int argc, char** argv)
 		desired_position << d_x, d_y, d_z;
 
 		mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
+
+		trajectory_msg.points[0].velocities[0].linear.x = v_x;
+		trajectory_msg.points[0].velocities[0].linear.y = v_y;
+		trajectory_msg.points[0].velocities[0].linear.z = v_z;
 
 		trajectory_pub.publish(trajectory_msg);
 	}

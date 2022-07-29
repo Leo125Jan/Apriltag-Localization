@@ -98,29 +98,29 @@ void square_path(void)
 
 	for(int i = 1; i <= point; i++)
 	{
-		path_points_x.push_back(-6 + 0.07*i);
-		path_points_y.push_back(-0.5);
+		path_points_x.push_back(-2 + 0.04*i);
+		path_points_y.push_back(2);
 		path_points_z.push_back(2);
 	}
 
 	for(int i = 1; i <= point; i++)
 	{
-		path_points_x.push_back(1);
-		path_points_y.push_back(-0.5 - 0.055*i);
+		path_points_x.push_back(2);
+		path_points_y.push_back(2 - 0.04*i);
 		path_points_z.push_back(2);
 	}
 
 	for(int i = 1; i <= point; i++)
 	{
-		path_points_x.push_back(1 - 0.07*i);
-		path_points_y.push_back(-6);
+		path_points_x.push_back(2 - 0.04*i);
+		path_points_y.push_back(-2);
 		path_points_z.push_back(2);
 	}
 
 	for(int i = 1; i <= point; i++)
 	{
-		path_points_x.push_back(-6);
-		path_points_y.push_back(-6 + 0.055*i);
+		path_points_x.push_back(-2);
+		path_points_y.push_back(-2 + 0.04*i);
 		path_points_z.push_back(2);
 	}
 }		
