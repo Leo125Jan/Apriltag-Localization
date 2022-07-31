@@ -53,6 +53,13 @@ void PathCallback(const trajectory_msgs::MultiDOFJointTrajectoryPoint::ConstPtr 
 	v_z = Point.velocities[0].linear.z;
 }
 
+int turn_count;
+
+void TurnCallback(const std_msgs::Int64::ConstPtr &msg)
+{
+	turn_count = msg->data;
+}
+
 int main(int argc, char** argv)
 {
 	ros::init(argc, argv, "waypoint_publisher");
@@ -113,7 +120,10 @@ int main(int argc, char** argv)
 	ros::Subscriber path_sub;
 	path_sub = nh.subscribe("/desired_trajectory", 1000, PathCallback);
 
-   // WaitforMessage setting
+	ros::Subscriber Turn_B_sub;
+	Turn_B_sub = nh.subscribe("/Turn_count", 1000, TurnCallback);
+
+	// WaitforMessage setting
 	boost::shared_ptr<trajectory_msgs::MultiDOFJointTrajectoryPoint const> sharedEdge;	
 	sharedEdge = ros::topic::waitForMessage<trajectory_msgs::MultiDOFJointTrajectoryPoint>("/desired_trajectory");
 
@@ -123,6 +133,15 @@ int main(int argc, char** argv)
 		ros::spinOnce();
 	}
 
+	ros::Publisher Trun_C;
+	Trun_C = nh.advertise<std_msgs::Int64>("/Turn_message", 10);
+
+	std_msgs::Int64 message;
+	message.data = 1;
+
+	float t_x, t_y, t_z;
+	t_x = 0.1; t_y = 0; t_z = 0;
+
 	while(ros::ok())
 	{
 		ros::spinOnce();
@@ -131,11 +150,100 @@ int main(int argc, char** argv)
 
 		mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
 
-		trajectory_msg.points[0].velocities[0].linear.x = v_x;
-		trajectory_msg.points[0].velocities[0].linear.y = v_y;
-		trajectory_msg.points[0].velocities[0].linear.z = v_z;
+		trajectory_msg.points[0].velocities[0].linear.x = t_x;
+		trajectory_msg.points[0].velocities[0].linear.y = t_y;
+		trajectory_msg.points[0].velocities[0].linear.z = t_z;
 
 		trajectory_pub.publish(trajectory_msg);
+
+		if (turn_count == 198)
+		{
+			ROS_INFO("Turn 1");
+			sleep(3);
+
+			for (int i = 1; i <= 1000; i++)
+			{
+				desired_position << d_x, d_y, d_z;
+
+				mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
+
+				trajectory_msg.points[0].velocities[0].linear.x = 0.001 - 0.000001*i;
+				trajectory_msg.points[0].velocities[0].linear.y = 0 - 0.000001*i;
+				trajectory_msg.points[0].velocities[0].linear.z = 0;
+
+				trajectory_pub.publish(trajectory_msg);
+
+				sleep(0.1);
+			}
+
+			t_x = 0.0; t_y = -0.001; t_z = 0.0;
+
+			sleep(2);
+
+			for (int i = 1; i <= 100;i++)
+			{
+				Trun_C.publish(message);
+			}
+		}
+		else if (turn_count == 198*2)
+		{
+			ROS_INFO("Turn 2");
+			sleep(3);
+
+			for (int i = 1; i <= 1000; i++)
+			{
+				desired_position << d_x, d_y, d_z;
+
+				mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
+
+				trajectory_msg.points[0].velocities[0].linear.x = +0.0 - 0.000001*i;
+				trajectory_msg.points[0].velocities[0].linear.y = -0.001 + 0.000001*i;
+				trajectory_msg.points[0].velocities[0].linear.z = 0;
+
+				trajectory_pub.publish(trajectory_msg);
+
+				sleep(0.1);
+			}
+
+			t_x = -0.001; t_y = 0.0; t_z = 0.0;
+
+			sleep(2);
+
+			for (int i = 1; i <= 100;i++)
+			{
+				Trun_C.publish(message);
+			}
+		}
+		else if (turn_count == 198*3)
+		{
+			ROS_INFO("Turn 3");
+			sleep(3);
+
+			for (int i = 1; i <= 1000; i++)
+			{
+
+				desired_position << d_x, d_y, d_z;
+
+				mav_msgs::msgMultiDofJointTrajectoryFromPositionYaw(desired_position, desired_yaw, &trajectory_msg);
+
+				trajectory_msg.points[0].velocities[0].linear.x = -0.001 + 0.000001*i;
+				trajectory_msg.points[0].velocities[0].linear.y = +0.0 + 0.000001*i;
+				trajectory_msg.points[0].velocities[0].linear.z = 0;
+
+				trajectory_pub.publish(trajectory_msg);
+
+				sleep(0.1);
+			}
+
+			t_x = 0.0; t_y = 0.001; t_z = 0.0;
+
+			sleep(2);
+
+			for (int i = 1; i <= 100;i++)
+			{
+				Trun_C.publish(message);
+			}
+		}
 	}
 
 	ros::spinOnce();

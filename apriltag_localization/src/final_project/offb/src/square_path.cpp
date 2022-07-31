@@ -29,6 +29,7 @@
 #include <ros/callback_queue.h>
 #include <std_msgs/Int8.h>
 #include "apriltag_ros/AprilTagDetectionArray.h"
+#include <std_msgs/Int64.h>
 
 #define normal
 #define PI 3.14159
@@ -67,6 +68,7 @@ trajectory_profile start, goal;
 ros::Publisher start_pose_pub, traj_pub, goal_pub, mode_pub;
 ros::Subscriber wpSub, UAV_pos_sub, mode_sub, target_sub, ugv_sub, track_sub;
 
+ros::Publisher Trun_B;
 
 void setStart(){
 
@@ -123,14 +125,15 @@ void square_path(void)
 		path_points_y.push_back(-2 + 0.04*i);
 		path_points_z.push_back(2);
 	}
-}		
+}	
+		
 void manualGoalMode()
 {
 	std::string ns;
 	ns = ros::this_node::getNamespace();
 	std::cout << ns << std::endl;
 	ROS_WARN("====Entering Setting Manual Goal====");
-	double dt = 25.0;
+	double dt = 10.0;
 	ros::Rate loop_rate(dt);
 
 	qptrajectory plan;
@@ -159,6 +162,10 @@ void manualGoalMode()
 	traj.transforms.push_back(transform);
 	traj.velocities.push_back(twist);
 	traj.accelerations.push_back(twist);
+
+	std_msgs::Int64 turn_count_pub;
+
+	int turn_count = 1;
 
 	while(ros::ok())
 	{
@@ -259,6 +266,26 @@ void manualGoalMode()
 		
 		ros::spinOnce();
 		loop_rate.sleep();
+
+		turn_count++;
+		turn_count_pub.data = turn_count;
+
+		Trun_B.publish(turn_count_pub);
+
+		if (turn_count % 198 == 0)
+		{
+			ROS_INFO("Turning");
+
+			boost::shared_ptr<std_msgs::Int64 const> sharedEdge;	
+			sharedEdge = ros::topic::waitForMessage<std_msgs::Int64>("/Turn_message");
+
+			if(sharedEdge != NULL)
+			{
+				ROS_INFO("Turn Complete");
+			}
+
+			sleep(2);
+		}
 	}
 	return;
 }
@@ -269,10 +296,12 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "geo");
 	ros::NodeHandle nh;
 
-	traj_pub= nh.advertise<trajectory_msgs::MultiDOFJointTrajectoryPoint>("desired_trajectory", 10);
+	traj_pub = nh.advertise<trajectory_msgs::MultiDOFJointTrajectoryPoint>("desired_trajectory", 10);
 	goal_pub = nh.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal",1000);
 	mode_pub = nh.advertise<std_msgs::Int8>("mode",1);
 	start_pose_pub = nh.advertise<geometry_msgs::PoseWithCovarianceStamped>("initialpose",1 );
+
+	Trun_B = nh.advertise<std_msgs::Int64>("/Turn_count", 10);
 
 	std::string ns;
 	double dt = 10.0;
@@ -281,9 +310,9 @@ int main(int argc, char **argv)
 
 	ns = ros::this_node::getNamespace();
 
-
 	square_path();
 	manualGoalMode();
+
 	ROS_WARN("====Quitting Manual Goal Mode====");
 
 	ros::spinOnce();
