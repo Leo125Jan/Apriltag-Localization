@@ -140,7 +140,7 @@ int main(int argc, char** argv)
 	message.data = 1;
 
 	float t_x, t_y, t_z;
-	t_x = 0.1; t_y = 0; t_z = 0;
+	t_x = 0.001; t_y = 0; t_z = 0;
 
 	while(ros::ok())
 	{

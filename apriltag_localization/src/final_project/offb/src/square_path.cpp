@@ -287,6 +287,9 @@ void manualGoalMode()
 			sleep(2);
 		}
 	}
+
+	sleep(6);
+
 	return;
 }
 

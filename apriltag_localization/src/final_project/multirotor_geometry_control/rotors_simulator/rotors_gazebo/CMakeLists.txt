@@ -105,6 +105,10 @@ target_link_libraries(Error_C_OOP_ver2 ${catkin_LIBRARIES})
 add_executable(imu_coord_enu src/imu_coord_enu.cpp)
 target_link_libraries(imu_coord_enu ${catkin_LIBRARIES})
 
+add_executable(waypoint_publisher_lo_OOP src/waypoint_publisher_lo_OOP.cpp)
+target_link_libraries(waypoint_publisher_lo_OOP ${catkin_LIBRARIES})
+
+
 foreach(dir launch models resource worlds)
    install(DIRECTORY ${dir}/
       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})

@@ -80,6 +80,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,17 +123,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule:
+	cd /home/leo/UAV/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule
+.PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule
+
+# Convenience name for target.
+waypoint_publisher_path_planning: final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule
+
+.PHONY : waypoint_publisher_path_planning
+
+# fast build rule for target.
+waypoint_publisher_path_planning/fast:
+	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build
+.PHONY : waypoint_publisher_path_planning/fast
+
+# Convenience name for target.
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/rule:
 	cd /home/leo/UAV/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/rule
 .PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/rule
@@ -181,21 +196,6 @@ Error_C_OOP: final_project/multirotor_geometry_control/rotors_simulator/rotors_g
 Error_C_OOP/fast:
 	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build
 .PHONY : Error_C_OOP/fast
-
-# Convenience name for target.
-final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule:
-	cd /home/leo/UAV/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule
-.PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule
-
-# Convenience name for target.
-hovering_example: final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule
-
-.PHONY : hovering_example
-
-# fast build rule for target.
-hovering_example/fast:
-	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build
-.PHONY : hovering_example/fast
 
 # Convenience name for target.
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_file.dir/rule:
@@ -303,21 +303,6 @@ path_planning_and_landing/fast:
 .PHONY : path_planning_and_landing/fast
 
 # Convenience name for target.
-final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule:
-	cd /home/leo/UAV/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule
-.PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule
-
-# Convenience name for target.
-waypoint_publisher_path_planning: final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/rule
-
-.PHONY : waypoint_publisher_path_planning
-
-# fast build rule for target.
-waypoint_publisher_path_planning/fast:
-	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build
-.PHONY : waypoint_publisher_path_planning/fast
-
-# Convenience name for target.
 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_iris.dir/rule:
 	cd /home/leo/UAV/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_iris.dir/rule
 .PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_iris.dir/rule
@@ -391,6 +376,36 @@ imu_coord_enu: final_project/multirotor_geometry_control/rotors_simulator/rotors
 imu_coord_enu/fast:
 	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/imu_coord_enu.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/imu_coord_enu.dir/build
 .PHONY : imu_coord_enu/fast
+
+# Convenience name for target.
+final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule:
+	cd /home/leo/UAV/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule
+.PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule
+
+# Convenience name for target.
+hovering_example: final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/rule
+
+.PHONY : hovering_example
+
+# fast build rule for target.
+hovering_example/fast:
+	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build
+.PHONY : hovering_example/fast
+
+# Convenience name for target.
+final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/rule:
+	cd /home/leo/UAV/build && $(MAKE) -f CMakeFiles/Makefile2 final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/rule
+.PHONY : final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/rule
+
+# Convenience name for target.
+waypoint_publisher_lo_OOP: final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/rule
+
+.PHONY : waypoint_publisher_lo_OOP
+
+# fast build rule for target.
+waypoint_publisher_lo_OOP/fast:
+	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/build
+.PHONY : waypoint_publisher_lo_OOP/fast
 
 src/Error_C.o: src/Error_C.cpp.o
 
@@ -716,6 +731,33 @@ src/waypoint_publisher_lo.cpp.s:
 	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo.dir/src/waypoint_publisher_lo.cpp.s
 .PHONY : src/waypoint_publisher_lo.cpp.s
 
+src/waypoint_publisher_lo_OOP.o: src/waypoint_publisher_lo_OOP.cpp.o
+
+.PHONY : src/waypoint_publisher_lo_OOP.o
+
+# target to build an object file
+src/waypoint_publisher_lo_OOP.cpp.o:
+	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/src/waypoint_publisher_lo_OOP.cpp.o
+.PHONY : src/waypoint_publisher_lo_OOP.cpp.o
+
+src/waypoint_publisher_lo_OOP.i: src/waypoint_publisher_lo_OOP.cpp.i
+
+.PHONY : src/waypoint_publisher_lo_OOP.i
+
+# target to preprocess a source file
+src/waypoint_publisher_lo_OOP.cpp.i:
+	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/src/waypoint_publisher_lo_OOP.cpp.i
+.PHONY : src/waypoint_publisher_lo_OOP.cpp.i
+
+src/waypoint_publisher_lo_OOP.s: src/waypoint_publisher_lo_OOP.cpp.s
+
+.PHONY : src/waypoint_publisher_lo_OOP.s
+
+# target to generate assembly for a file
+src/waypoint_publisher_lo_OOP.cpp.s:
+	cd /home/leo/UAV/build && $(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/src/waypoint_publisher_lo_OOP.cpp.s
+.PHONY : src/waypoint_publisher_lo_OOP.cpp.s
+
 src/waypoint_publisher_move_to_husky.o: src/waypoint_publisher_move_to_husky.cpp.o
 
 .PHONY : src/waypoint_publisher_move_to_husky.o
@@ -778,9 +820,10 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... test"
+	@echo "... waypoint_publisher_path_planning"
 	@echo "... install"
 	@echo "... Error_C_OOP"
-	@echo "... hovering_example"
 	@echo "... list_install_components"
 	@echo "... waypoint_publisher_file"
 	@echo "... waypoint_publisher_move_to_husky"
@@ -790,14 +833,14 @@ help:
 	@echo "... sdf"
 	@echo "... waypoint_publisher_lo"
 	@echo "... path_planning_and_landing"
-	@echo "... waypoint_publisher_path_planning"
-	@echo "... test"
 	@echo "... waypoint_publisher_iris"
 	@echo "... Error_C"
 	@echo "... rebuild_cache"
 	@echo "... waypoint_publisher"
 	@echo "... Error_C_OOP_ver2"
 	@echo "... imu_coord_enu"
+	@echo "... hovering_example"
+	@echo "... waypoint_publisher_lo_OOP"
 	@echo "... src/Error_C.o"
 	@echo "... src/Error_C.i"
 	@echo "... src/Error_C.s"
@@ -834,6 +877,9 @@ help:
 	@echo "... src/waypoint_publisher_lo.o"
 	@echo "... src/waypoint_publisher_lo.i"
 	@echo "... src/waypoint_publisher_lo.s"
+	@echo "... src/waypoint_publisher_lo_OOP.o"
+	@echo "... src/waypoint_publisher_lo_OOP.i"
+	@echo "... src/waypoint_publisher_lo_OOP.s"
 	@echo "... src/waypoint_publisher_move_to_husky.o"
 	@echo "... src/waypoint_publisher_move_to_husky.i"
 	@echo "... src/waypoint_publisher_move_to_husky.s"

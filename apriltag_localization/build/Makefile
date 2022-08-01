@@ -8046,6 +8046,19 @@ move_base_msgs_generate_messages_py/fast:
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named waypoint_publisher_path_planning
+
+# Build rule for target.
+waypoint_publisher_path_planning: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 waypoint_publisher_path_planning
+.PHONY : waypoint_publisher_path_planning
+
+# fast build rule for target.
+waypoint_publisher_path_planning/fast:
+	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build
+.PHONY : waypoint_publisher_path_planning/fast
+
+#=============================================================================
 # Target rules for targets named Error_C_OOP
 
 # Build rule for target.
@@ -8057,19 +8070,6 @@ Error_C_OOP: cmake_check_build_system
 Error_C_OOP/fast:
 	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/Error_C_OOP.dir/build
 .PHONY : Error_C_OOP/fast
-
-#=============================================================================
-# Target rules for targets named hovering_example
-
-# Build rule for target.
-hovering_example: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hovering_example
-.PHONY : hovering_example
-
-# fast build rule for target.
-hovering_example/fast:
-	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build
-.PHONY : hovering_example/fast
 
 #=============================================================================
 # Target rules for targets named waypoint_publisher_file
@@ -8163,19 +8163,6 @@ path_planning_and_landing/fast:
 .PHONY : path_planning_and_landing/fast
 
 #=============================================================================
-# Target rules for targets named waypoint_publisher_path_planning
-
-# Build rule for target.
-waypoint_publisher_path_planning: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 waypoint_publisher_path_planning
-.PHONY : waypoint_publisher_path_planning
-
-# fast build rule for target.
-waypoint_publisher_path_planning/fast:
-	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_path_planning.dir/build
-.PHONY : waypoint_publisher_path_planning/fast
-
-#=============================================================================
 # Target rules for targets named waypoint_publisher_iris
 
 # Build rule for target.
@@ -8239,6 +8226,32 @@ imu_coord_enu: cmake_check_build_system
 imu_coord_enu/fast:
 	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/imu_coord_enu.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/imu_coord_enu.dir/build
 .PHONY : imu_coord_enu/fast
+
+#=============================================================================
+# Target rules for targets named hovering_example
+
+# Build rule for target.
+hovering_example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hovering_example
+.PHONY : hovering_example
+
+# fast build rule for target.
+hovering_example/fast:
+	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/hovering_example.dir/build
+.PHONY : hovering_example/fast
+
+#=============================================================================
+# Target rules for targets named waypoint_publisher_lo_OOP
+
+# Build rule for target.
+waypoint_publisher_lo_OOP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 waypoint_publisher_lo_OOP
+.PHONY : waypoint_publisher_lo_OOP
+
+# fast build rule for target.
+waypoint_publisher_lo_OOP/fast:
+	$(MAKE) -f final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/build.make final_project/multirotor_geometry_control/rotors_simulator/rotors_gazebo/CMakeFiles/waypoint_publisher_lo_OOP.dir/build
+.PHONY : waypoint_publisher_lo_OOP/fast
 
 # Help Target
 help:
@@ -8859,8 +8872,8 @@ help:
 	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... move_base_msgs_generate_messages_nodejs"
 	@echo "... move_base_msgs_generate_messages_py"
+	@echo "... waypoint_publisher_path_planning"
 	@echo "... Error_C_OOP"
-	@echo "... hovering_example"
 	@echo "... waypoint_publisher_file"
 	@echo "... waypoint_publisher_move_to_husky"
 	@echo "... waypoint_publisher_Landing"
@@ -8868,12 +8881,13 @@ help:
 	@echo "... sdf"
 	@echo "... waypoint_publisher_lo"
 	@echo "... path_planning_and_landing"
-	@echo "... waypoint_publisher_path_planning"
 	@echo "... waypoint_publisher_iris"
 	@echo "... Error_C"
 	@echo "... waypoint_publisher"
 	@echo "... Error_C_OOP_ver2"
 	@echo "... imu_coord_enu"
+	@echo "... hovering_example"
+	@echo "... waypoint_publisher_lo_OOP"
 .PHONY : help
 
 
