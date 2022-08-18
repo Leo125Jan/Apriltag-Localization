@@ -1,2 +1,0 @@
-mavros_offboard_control/uav_control
--DCATKIN_DEVEL_PREFIX=/home/leo/IMP/devel -DCMAKE_INSTALL_PREFIX=/home/leo/IMP/install -G Unix Makefiles
