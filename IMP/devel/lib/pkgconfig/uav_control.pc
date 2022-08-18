@@ -1,0 +1,8 @@
+prefix=/home/leo/IMP/devel
+
+Name: uav_control
+Description: Description of uav_control
+Version: 1.0.0
+Cflags: -I/home/leo/IMP/src/mavros_offboard_control/uav_control/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs
