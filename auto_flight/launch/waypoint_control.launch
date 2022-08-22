@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="auto_flight" type="ap_control" name="ap_control" output="screen">
+    <rosparam file="$(find auto_flight)/yaml/waypoint.yaml" />
+  </node>
+</launch>
