@@ -192,7 +192,7 @@ var app = new Vue({
             this.control_pub.publish(this.control_signal)
             this.logs.unshift((new Date()).toTimeString() + 'Control Signal: ' + this.control_signal.data)
 
-            document.getElementById("btn_take_off").disabled = false;
+            document.getElementById("btn_take_off").disabled = true;
             document.getElementById("btn_return").disabled = true;
         },
 
@@ -219,6 +219,8 @@ var app = new Vue({
         },
 
         startFlight: function(){
+		
+		document.getElementById("btn_return").disabled = false;
 
             this.control_signal = new ROSLIB.Message({
                 data: 3
@@ -230,9 +232,9 @@ var app = new Vue({
             //TODO
             /*Send goal point, direction, hover_time & cruise_height*/
             // Create a control signal publisher: take off 1, return 2, stop 0
-            const destination_x = parseInt(this.destination_x, 10)
-            const destination_y = parseInt(this.destination_y, 10)
-            const destination_z = parseInt(this.destination_z, 10)
+            const destination_x = parseFloat(this.destination_x, 10)
+            const destination_y = parseFloat(this.destination_y, 10)
+            const destination_z = parseFloat(this.destination_z, 10)
 
             // this.dest_pub = new ROSLIB.Topic({
             //     ros: this.ros,
