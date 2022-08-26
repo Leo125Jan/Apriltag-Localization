@@ -214,6 +214,12 @@ add_executable(controller
 add_executable(ap_control src/ap_control.cpp)
 target_link_libraries(ap_control ${catkin_LIBRARIES})
 
+add_executable(web_control src/web_control.cpp)
+target_link_libraries(web_control ${catkin_LIBRARIES})
+
+add_executable(main_control src/main_control.cpp)
+target_link_libraries(main_control ${catkin_LIBRARIES})
+
 target_link_libraries(controller PUBLIC
   ${catkin_LIBRARIES}
 

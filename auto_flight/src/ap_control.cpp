@@ -3,6 +3,7 @@
 #include <iostream>
 #include <unistd.h>
 #include "ros/ros.h"
+#include <std_msgs/Int8.h>
 #include "auto_flight/ncrl_link.h"
 #include <geometry_msgs/PoseStamped.h>
 
@@ -92,7 +93,7 @@ int main(int argc, char **argv)
 
 	get_waypoint();
 
-	if (check);
+	if (check)
 	{
 		ros::shutdown();
 	}
@@ -103,56 +104,76 @@ int main(int argc, char **argv)
 
 	auto_flight::ncrl_link command;
 
+	ROS_INFO("Initialization");
+
+	command.mode = '0';
+    command.data1 = 0;
+	command.data2 = 0;
+	command.data3 = 0;
+
+	wp_pub.publish(command);
+
     // Take off
     ROS_INFO("Take off mode");
     sleep(2);
 
-    command.mode = 1;
+    command.mode = '1';
     command.data1 = 0;
 	command.data2 = 0;
 	command.data3 = 0;
 
     wp_pub.publish(command);
 
+    sleep(5);
     // Go to target
     ROS_INFO("Waypoint mode");
     sleep(2);
 
-    int segment = 0;
-    float d, err = 0.1;
+    ros::Rate loop_rate(200);
 
-    while(ros::ok())
+    float err = 0.3;
+
+    for (int segment = 0;segment < num;segment++)
     {
-    	ros::spinOnce();
-
-		command.mode = 2;
+    	command.mode = '2';
     	command.data1 = x_pos[segment];
     	command.data2 = y_pos[segment];
     	command.data3 = z_pos[segment];
 
-    	if (abs(ode_x - x_pos[segment]) > err || abs(ode_y - y_pos[segment]) > err)
-    	{
-    		wp_pub.publish(command);
-    		sleep(0.1);
-    	}
-    	else
-    	{
-    		if (segment < num)
-	    	{
-	    		segment++;
-	    	}
-	    	else
-	    	{
-	    		break;
-	    	}
-    	}
+    	wp_pub.publish(command);
+
+    	while(ros::ok())
+		{
+			ros::spinOnce();
+
+			if (abs(ode_x - x_pos[segment]) < err && abs(ode_y - y_pos[segment]) < err)
+			{
+				ROS_INFO("segment %d done", segment);
+
+				for (int i = 0;i < 200;i++)
+				{
+					command.mode = '2';
+			    	command.data1 = x_pos[segment];
+			    	command.data2 = y_pos[segment];
+			    	command.data3 = z_pos[segment];
+
+			    	wp_pub.publish(command);
+
+			    	loop_rate.sleep();
+				}
+
+				break;
+			}
+
+			loop_rate.sleep();
+		}
+
     }
 
     // Land
     ROS_INFO("Land mode");
-    sleep(2);
 
-    command.mode = 3;
+    command.mode = '3';
     command.data1 = 0;
 	command.data2 = 0;
 	command.data3 = 0;
@@ -160,7 +181,7 @@ int main(int argc, char **argv)
 	wp_pub.publish(command);
 
     ROS_INFO("Mission Complete");
-    sleep(2);
+    sleep(1);
 
     ros::shutdown();
 
