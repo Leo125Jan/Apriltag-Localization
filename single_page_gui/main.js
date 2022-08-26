@@ -4,28 +4,28 @@ var app = new Vue({
         connected: false,
         failure: false,
         ros: null,
-        ws_address: '9090',
+        uav_port: '9090',
+        uav_ip: '0.0.0.0',
         logs: [],
         loading: false,
         topic: null,
         message: null,
         enable_takeoff: false,
         enable_return: false,
-        control_pub: null,
         control_signal: null,
         destination_x: null,
         destination_y: null,
         destination_z: null,
         direction: 1,
         cruise_height: 1,
-        hover_time: 15
+        hover_time: 15,
     },
     methods: {
         connect: function(){
             console.log('Connecting...')
 
             this.ros = new ROSLIB.Ros({
-                url: 'ws://0.0.0.0:' + this.ws_address
+                url: 'ws://' + this.uav_ip + ':' + this.uav_port
             })
 
             this.ros.on('connection', () => {
@@ -65,11 +65,56 @@ var app = new Vue({
 
                 this.dest_pub.publish(flight_destination)
 
-                //TODO
-                /* Determine whether the uav is static*/ 
-                //if yes
-                this.enable_takeoff = true
-                this.enable_return = false
+                this.id_sub = new ROSLIB.Topic({
+                    ros: this.ros,
+                    name: '/id',
+                    messageType: 'std_msgs/Int8'
+                })
+        
+                this.id_sub.subscribe(function(message){
+                    document.getElementById("uav_id").innerHTML = message.data;
+                    this.id_sub.unsubscribe();
+                })
+
+                this.status_sub = new ROSLIB.Topic({
+                    ros: this.ros,
+                    name: '/status',
+                    messageType: 'std_msgs/String'
+                })
+        
+                this.status_sub.subscribe(function(message){
+                    document.getElementById("uav_status").innerHTML = message.data;
+                    if(message.data == 'Cruising'){
+                        document.getElementById("btn_take_off").disabled = true;
+                        document.getElementById("btn_return").disabled = true;
+                        document.getElementById("btn_stop").disabled = true;
+                        
+                    }else{
+                        document.getElementById("btn_take_off").disabled = false;
+                        document.getElementById("btn_return").disabled = true;
+                        document.getElementById("btn_stop").disabled = false;                    
+                    }
+                })
+
+                this.location_sub = new ROSLIB.Topic({
+                    ros: this.ros,
+                    name: '/location',
+                    messageType: 'std_msgs/Int8'
+                })
+        
+                this.location_sub.subscribe(function(message){
+                    document.getElementById("uav_location").innerHTML = message.data;
+                })
+
+                this.height_sub = new ROSLIB.Topic({
+                    ros: this.ros,
+                    name: '/flight_height',
+                    messageType: 'std_msgs/Int8'
+                })
+        
+                this.height_sub.subscribe(function(message){
+                    document.getElementById("uav_height").innerHTML = message.data;
+                })
 
                 document.getElementById("cam_topic").style.display = "block";
                 document.getElementById("mjpeg").style.display = "block";
@@ -90,10 +135,11 @@ var app = new Vue({
         },
 
         disconnect: function(){
+			delete this.cameraViewer;
             this.ros.close()
             this.connected = false
             console.log('Connection Closed')
-            document.getElementById("cam_topic").style.display = "block";
+            document.getElementById("cam_topic").style.display = "none";
             document.getElementById("mjpeg").style.display = "none";
         },
 
@@ -128,8 +174,8 @@ var app = new Vue({
             this.control_pub.publish(this.control_signal)
             this.logs.unshift((new Date()).toTimeString() + 'Control Signal: ' + this.control_signal.data)
 
-            this.enable_return = true
-            this.enable_takeoff = false
+            document.getElementById("btn_take_off").disabled = true;
+            document.getElementById("btn_return").disabled = false;
         },
 
         returning: function(){
@@ -146,8 +192,8 @@ var app = new Vue({
             this.control_pub.publish(this.control_signal)
             this.logs.unshift((new Date()).toTimeString() + 'Control Signal: ' + this.control_signal.data)
 
-            this.enable_return = false
-            this.enable_takeoff = false
+            document.getElementById("btn_take_off").disabled = false;
+            document.getElementById("btn_return").disabled = true;
         },
 
         stop: function(){
@@ -163,8 +209,13 @@ var app = new Vue({
             this.control_pub.publish(this.control_signal)
             this.logs.unshift((new Date()).toTimeString() + 'Control Signal: ' + this.control_signal.data)
 
-            this.enable_return = false
-            this.enable_takeoff = true
+            if(document.getElementById("btn_take_off").disabled == true && document.getElementById("btn_return").disabled == true){
+                document.getElementById("btn_take_off").disabled = false;
+                document.getElementById("btn_return").disabled = true;
+            }else{
+                document.getElementById("btn_take_off").disabled = true;
+                document.getElementById("btn_return").disabled = true;
+            }
         },
 
         startFlight: function(){
@@ -199,10 +250,7 @@ var app = new Vue({
             })
 
             this.dest_pub.publish(flight_destination)
-            this.logs.unshift((new Date()).toTimeString() + 'Flying to tag ' + flight_destination.postion.x
-                + flight_destination.postion.y + flight_destination.postion.z)
-
-            this.enable_return = true
+            this.logs.unshift((new Date()).toTimeString() + 'Flying to tag ' + flight_destination.postion.x)
         },
 
         chooseDirection: function(action){
@@ -228,10 +276,10 @@ var app = new Vue({
     },
     updated(){
         //TODO
-        //Read these info from ros topic
-        document.getElementById("uav_id").innerHTML = "1";
-        document.getElementById("uav_status").innerHTML = "Cruising";
-        document.getElementById("uav_location").innerHTML = "Nav point";
+        this.id_sub.subscribe(function(message){
+            document.getElementById("uav_id").innerHTML = message.data;
+            this.id_sub.unsubscribe();
+        })
 
         if(this.destination == ''){
             document.getElementById("btn_start").disabled = true;
