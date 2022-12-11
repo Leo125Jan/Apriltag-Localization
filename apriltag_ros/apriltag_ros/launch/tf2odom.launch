@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="apriltag_ros" type="tf_to_odom" name="tf_to_odom" args="RB CB LB LC LT CT RT RC CC" output="screen"/>
+    <rosparam file="$(find apriltag_ros)/config/map2bundle.yaml" />
+</launch>

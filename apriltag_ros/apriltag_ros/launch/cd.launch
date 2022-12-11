@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="apriltag_ros" type="ct" name="ct" output="screen"/>
+</launch>
