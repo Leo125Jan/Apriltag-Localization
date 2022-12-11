@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="indoor_localization" type="tf_to_odom" name="tf_to_odom" args="tag412" output="screen"/>
+    <rosparam file="$(find indoor_localization)/config/map2bundle.yaml" />
+</launch>

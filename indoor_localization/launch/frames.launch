@@ -1,0 +1,23 @@
+<launch>
+<!--
+  <node name="map_to_rb" pkg="tf2_ros" type="static_transform_publisher" args="0.42768155 -0.4852731 -0.00417485 0 0 0 1.0 map tag_bundle_right_bottom" />
+  <node name="map_to_cb" pkg="tf2_ros" type="static_transform_publisher" args="-0.07486597 -0.4785397 0.00428553 0 0 0.0037331 0.999993 map tag_bundle_center_bottom" />
+  <node name="map_to_lb" pkg="tf2_ros" type="static_transform_publisher" args="-0.42448583 -0.47745534 0.00394343 0 0 0.0016137 0.9999987 map tag_bundle_left_bottom" />
+  <node name="map_to_lc" pkg="tf2_ros" type="static_transform_publisher" args="-0.41786661 0.06825715 -0.00339003 0 0 -0.0046244 0.9999893 map tag_bundle_left_center" />
+  <node name="map_to_cc" pkg="tf2_ros" type="static_transform_publisher" args=" 0 0 0 0 0 0 1.0 map tag_bundle_center_center" />
+  <node name="map_to_rc" pkg="tf2_ros" type="static_transform_publisher" args="0.42863225 -0.08036263 -0.0182084 0 0 0.0056659 0.9999839 map tag_bundle_right_center" />
+  <node name="map_to_ct" pkg="tf2_ros" type="static_transform_publisher" args="0.07901816 0.67185808 -0.00363602 0 0 -0.0109741 0.9999398  map tag_bundle_center_top" />
+  <node name="map_to_rt" pkg="tf2_ros" type="static_transform_publisher" args="0.42635642 0.66976314 -0.01138004 0 0 -0.0040737 0.9999917 map tag_bundle_right_top" />
+  <node name="map_to_lt" pkg="tf2_ros" type="static_transform_publisher" args="-0.41847062 0.67012691 0.00058574 0 0 -0.0040737 0.9965048 map tag_bundle_left_top" />
+-->
+<!--
+  <node name="map_to_412" pkg="tf" type="static_transform_publisher" args="-0.05 +0.065 0 0 0 0 1 map tag412 10" />
+  <node name="map_to_413" pkg="tf" type="static_transform_publisher" args="+0.05 +0.065 0 0 0 0 1 map tag413 10" />
+  <node name="map_to_414" pkg="tf" type="static_transform_publisher" args="-0.05 -0.065 0 0 0 0 1 map tag414 10" />
+  <node name="map_to_415" pkg="tf" type="static_transform_publisher" args="+0.05 -0.065 0 0 0 0 1 map tag415 10" />
+-->
+  <node name="map_to_odom" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 map odom 1" />
+  <!--<node name="base_link_to_imu" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 3.1415927 0 1.5707963 base_link imu" />-->
+  <node name="base_link_to_camera_link" pkg="tf" type="static_transform_publisher" args="0 0 0 0 3.1415926 0 base_link camera_link 1" />
+  <!--<node name="base_link_to_lidar" pkg="tf2_ros" type="static_transform_publisher" args="0 0 -0.1 0 -1.5707963 0 base_link laser" />-->
+</launch>
