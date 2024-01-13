@@ -52,5 +52,5 @@ width="480" height="270" border="10" /></a>
 
 Subsequently, we relied solely on AprilTags localization for UAV to take off. However, after takeoff, UAV immediately deviated in a certain direction and eventually left the range of AprilTags. We speculate that the reason might be that the camera could not detect the AprilTags during flight, causing the position estimation to rely solely on the IMU. Over time, the IMU accumulates errors, leading to inaccurate position estimation and instability of the drone.
 
-“This project has ultimately only progressed to this step.
+This project has ultimately only progressed to this step.
 
