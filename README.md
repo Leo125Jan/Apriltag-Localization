@@ -35,7 +35,7 @@ We use the following package, which employs EKF/UKF to fuse the data from the IM
 
 * Comparison of ground truth and localization by AprilTags
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=-AoKKMnz1AA" target="_blank"><img src="http://img.youtube.com/vi/mCQ8oAgoN5k/0.jpg" 
+<a href="http://www.youtube.com/watch?v=-AoKKMnz1AA" target="_blank"><img src="http://img.youtube.com/vi/mCQ8oAgoN5k/0.jpg" 
 width="480" height="270" border="10" /></a>
 
 
