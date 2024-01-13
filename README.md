@@ -44,6 +44,7 @@ width="480" height="270" border="10" /></a>
 * Comparison of OptiTracl localization and AprilTags localization
 
 Our goal is to test the accuracy of localization using AprilTags in reality.
+
 <a href="http://www.youtube.com/watch?v=7sUJfCsmZnY" target="_blank"><img src="http://img.youtube.com/vi/7sUJfCsmZnY/0.jpg" 
 width="480" height="270" border="10" /></a>
 
