@@ -19,5 +19,24 @@
 * [IntelRealSense](https://github.com/IntelRealSense/realsense-ros)
 
 ### Robot Localization
-We use following package, it employ ekf/ukf to fuse the data from imu and apriltags.
+We use the following package, which employs EKF/UKF to fuse the data from the IMU and camera detecting AprilTags.
 * [Robot_Localization](https://github.com/cra-ros-pkg/robot_localization/tree/melodic-devel)
+
+## Usage
+
+### Simulation
+
+* UAV with forward and downward d435i camera
+![fbAIWoS](https://github.com/Leo125Jan/Apriltag-Localization/assets/98295556/42abefe9-42c8-4034-826d-629ff589029f)
+
+* Environment for evaluation
+
+![3qKaYNB](https://github.com/Leo125Jan/Apriltag-Localization/assets/98295556/48ee5cd6-d4b3-479d-ba61-68aa515ac558)
+
+* Comparison of ground truth and localization by AprilTags
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-AoKKMnz1AA" target="_blank"><img src="http://img.youtube.com/vi/mCQ8oAgoN5k/0.jpg" 
+width="480" height="270" border="10" /></a>
+
+
+
