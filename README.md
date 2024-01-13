@@ -27,11 +27,12 @@ We use the following package, which employs EKF/UKF to fuse the data from the IM
 ### Simulation
 
 * UAV with forward and downward d435i camera
-![fbAIWoS](https://github.com/Leo125Jan/Apriltag-Localization/assets/98295556/42abefe9-42c8-4034-826d-629ff589029f)
+<a><img src="https://user-images.githubusercontent.com/98295556/42abefe9-42c8-4034-826d-629ff589029f.gif" 
+width="640" height="360" border="10" /></a>
 
 * Environment for evaluation
-
-![3qKaYNB](https://github.com/Leo125Jan/Apriltag-Localization/assets/98295556/48ee5cd6-d4b3-479d-ba61-68aa515ac558)
+<a><img src="https://user-images.githubusercontent.com/98295556/48ee5cd6-d4b3-479d-ba61-68aa515ac558.png" 
+width="640" height="360" border="10" /></a>
 
 * Comparison of ground truth and localization by AprilTags
 
