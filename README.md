@@ -34,9 +34,8 @@ We use the following package, which employs EKF/UKF to fuse the data from the IM
 
 * Comparison of ground truth and localization by AprilTags
 
-Our goal is to test the accuracy of loc
+Our goal is to test the accuracy of localization using AprilTags in simulation environment.
 
-alization using AprilTags in simulation environment.
 <a href="http://www.youtube.com/watch?v=-AoKKMnz1AA" target="_blank"><img src="http://img.youtube.com/vi/-AoKKMnz1AA/0.jpg" 
 width="480" height="270" border="10" /></a>
 
