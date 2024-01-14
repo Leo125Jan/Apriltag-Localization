@@ -7,7 +7,7 @@
 
 ## Built With
 
-### Simulation Environmrnt
+### Simulation
 * ROS & Gazebo
 * [Rotor Simulator](https://github.com/ethz-asl/rotors_simulator)
 
