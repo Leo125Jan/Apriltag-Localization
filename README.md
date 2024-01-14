@@ -9,6 +9,7 @@
 
 ### Simulation Environmrnt
 * ROS & Gazebo
+* [Rotor Simulator](https://github.com/ethz-asl/rotors_simulator)
 
 ### Experiment
 * NCRL flight controller
