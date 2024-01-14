@@ -45,7 +45,7 @@ width="480" height="270" border="10" /></a>
 
 ### Implement
 
-* Comparison of OptiTracl localization and AprilTags localization
+* Comparison of OptiTrack localization and AprilTags localization
 
 Our goal is to test the accuracy of localization using AprilTags in reality.
 
